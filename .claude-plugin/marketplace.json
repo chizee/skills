@@ -1,14 +1,14 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "wondelai-skills",
-  "description": "42 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
+  "description": "43 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
   "owner": {
     "name": "Wondel.ai",
     "email": "hello@wondel.ai"
   },
   "metadata": {
-    "description": "42 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
-    "version": "1.3.0"
+    "description": "43 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
+    "version": "1.4.0"
   },
   "plugins": [
     {
@@ -34,8 +34,8 @@
     },
     {
       "name": "ux-design",
-      "description": "UX and UI design skills including Refactoring UI, iOS HIG design, usability heuristics, habit-forming product design, behavior design for retention, web typography, award-winning top-design, and Don Norman's foundational design principles",
-      "version": "1.0.0",
+      "description": "UX and UI design skills including Refactoring UI, iOS HIG design, usability heuristics, habit-forming product design, behavior design for retention, web typography, award-winning top-design, Steve Jobs-style design reviews, and Don Norman's foundational design principles",
+      "version": "1.1.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -44,7 +44,7 @@
       "repository": "https://github.com/wondelai/skills",
       "license": "MIT",
       "category": "design",
-      "keywords": ["ux", "ui", "design", "ios", "hig", "typography", "usability", "refactoring-ui", "hooked", "retention", "behavior-design", "tiny-habits"],
+      "keywords": ["ux", "ui", "design", "ios", "hig", "typography", "usability", "refactoring-ui", "hooked", "retention", "behavior-design", "tiny-habits", "steve-jobs", "design-review", "simplicity"],
       "source": "./",
       "strict": false,
       "skills": [
@@ -57,7 +57,8 @@
         "./top-design",
         "./design-everyday-things",
         "./lean-ux",
-        "./microinteractions"
+        "./microinteractions",
+        "./steve-jobs-design-review"
       ]
     },
     {

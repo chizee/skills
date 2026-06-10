@@ -531,6 +531,58 @@ Use microinteractions skill.
 
 ---
 
+### Cut the Roadmap to the Bets That Matter
+
+> Your Q3 roadmap has 14 initiatives, every stakeholder calls theirs critical, and nothing great is shipping.
+
+**Prompt:**
+
+```
+Here's our Q3 roadmap: [paste the list of initiatives with
+one-line descriptions].
+
+Review it like Steve Jobs would:
+- Force-rank everything, then cut to the top 3 — and tell me
+  exactly what to say to the stakeholders whose items died
+- Draft our "no list": things we deliberately won't do, with
+  one-line reasons
+- Map our product tiers onto a 2x2 matrix — which overlapping
+  offerings should merge or die?
+
+End with a binary verdict on the roadmap and a ranked fix list.
+
+Use steve-jobs-design-review skill.
+```
+
+**Skills used:** steve-jobs-design-review
+
+---
+
+### Replace the Backlog With a Betting Table
+
+> Your 200-item backlog is a graveyard nobody grooms, and planning meetings produce estimates that never hold.
+
+**Prompt:**
+
+```
+We're a 12-person product team drowning in a 200-item backlog.
+Sprint estimates are fiction and nothing meaningful ships.
+
+Help us switch to Shape Up:
+- Shape our top candidate ("team workspaces") into a pitch:
+  appetite, breadboard, rabbit holes, no-gos
+- Design our betting table: who attends, what gets bet on,
+  what happens to everything else
+- Explain fixed time / variable scope to a team used to
+  fixed scope / variable time
+
+Use 37signals-way skill.
+```
+
+**Skills used:** 37signals-way
+
+---
+
 ## Online Marketers & Growth
 
 You're optimizing funnels, writing copy, running campaigns, and obsessing over conversion rates.
@@ -937,6 +989,35 @@ Use lean-ux and ux-heuristics skills.
 ```
 
 **Skills used:** lean-ux, ux-heuristics
+
+---
+
+### Get a Steve Jobs-Style Design Review
+
+> Your team thinks the new feature is ready to ship. You want one brutal, honest review before customers see it.
+
+**Prompt:**
+
+```
+Our team says the new onboarding flow is done.
+Here it is, screen by screen: [describe screens or paste
+screenshot paths]. The landing page promises "set up your
+workspace in 2 minutes."
+
+Review it like Steve Jobs would:
+- Walk it cold as a new customer and count steps-to-value
+- Test it against the landing page promise (the MobileMe test)
+- Tell me what to remove — not what to add
+- Check the back of the fence: empty states, error copy,
+  the verification email
+
+End with the verdict: INSANELY GREAT or NOT DONE, with a
+ranked fix list specific enough to act on today.
+
+Use steve-jobs-design-review skill.
+```
+
+**Skills used:** steve-jobs-design-review
 
 ---
 
@@ -1917,3 +1998,5 @@ Quick reference showing where each skill appears in the examples above.
 | clean-architecture | Tech Leads (x2) |
 | release-it | Tech Leads (x2) |
 | high-perf-browser | Software Engineers |
+| 37signals-way | Product Managers |
+| steve-jobs-design-review | Product Managers, UX/UI Designers |

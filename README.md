@@ -12,7 +12,7 @@ Agent skills for Claude Code and agentskills.io-compatible agents. Browse all sk
 
 # Install plugin collections
 /plugin install product-strategy@wondelai-skills      # Jobs to Be Done, Negotiation, Mom Test
-/plugin install ux-design@wondelai-skills             # Refactoring UI, iOS HIG, UX Heuristics, Hooked, Improve Retention, Web Typography, Top Design, Design of Everyday Things, Lean UX, Microinteractions
+/plugin install ux-design@wondelai-skills             # Refactoring UI, iOS HIG, UX Heuristics, Hooked, Improve Retention, Web Typography, Top Design, Design of Everyday Things, Lean UX, Microinteractions, Steve Jobs Design Review
 /plugin install marketing-cro@wondelai-skills         # CRO Methodology, StoryBrand, Scorecard Marketing, Contagious, 1-Page Marketing
 /plugin install sales-influence@wondelai-skills       # Influence Psychology, Predictable Revenue, Made to Stick, $100M Offers
 /plugin install product-innovation@wondelai-skills    # Lean Startup, Design Sprint, Design of Everyday Things, Inspired, Continuous Discovery, 37signals Way
@@ -73,6 +73,7 @@ npx skills add wondelai/skills/clean-architecture
 npx skills add wondelai/skills/release-it
 npx skills add wondelai/skills/high-perf-browser
 npx skills add wondelai/skills/37signals-way
+npx skills add wondelai/skills/steve-jobs-design-review
 ```
 
 ## Available Skills
@@ -121,8 +122,9 @@ npx skills add wondelai/skills/37signals-way
 | [release-it](https://skills.wondel.ai/skills/release-it/) | Production-ready systems: circuit breakers, bulkheads, timeouts, retry logic | [Michael Nygard](https://x.com/mtnygard)'s [*"Release It!"*](https://www.amazon.com/Release-Design-Deploy-Production-Ready-Software/dp/1680502395?tag=wondelai00-20) |
 | [high-perf-browser](https://skills.wondel.ai/skills/high-perf-browser/) | Web performance: network protocols, resource loading, browser rendering | [Ilya Grigorik](https://x.com/igrigorik)'s [*"High Performance Browser Networking"*](https://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763?tag=wondelai00-20) |
 | [37signals-way](https://skills.wondel.ai/skills/37signals-way/) | Build less, shape work, ship in six-week cycles with small autonomous teams | [Jason Fried](https://x.com/jasonfried) & [DHH](https://x.com/dhh)'s [*"Getting Real"*](https://www.amazon.com/Getting-Real-Smarter-Successful-Application/dp/0578012812?tag=wondelai00-20), [*"Rework"*](https://www.amazon.com/Rework-Jason-Fried/dp/0307463745?tag=wondelai00-20) & [Ryan Singer](https://x.com/rjs)'s [*"Shape Up"*](https://www.amazon.com/Shape-Up-Circles-Ship-Work/dp/B09ZSY1MWP?tag=wondelai00-20) |
+| [steve-jobs-design-review](https://skills.wondel.ai/skills/steve-jobs-design-review/) | Jobs-style design reviews: ruthless simplicity, focus, demo culture, binary verdicts | [Walter Isaacson](https://x.com/WalterIsaacson)'s [*"Steve Jobs"*](https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?tag=wondelai00-20), [Ken Segall](https://x.com/ksegall)'s [*"Insanely Simple"*](https://www.amazon.com/Insanely-Simple-Obsession-Drives-Success/dp/1591846218?tag=wondelai00-20) & [Ken Kocienda](https://x.com/kocienda)'s [*"Creative Selection"*](https://www.amazon.com/Creative-Selection-Inside-Apples-Process/dp/1250194466?tag=wondelai00-20) |
 
-> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 49 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs).
+> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 73 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs).
 
 ---
 
@@ -1059,6 +1061,28 @@ Build lean, opinionated products using the 37signals philosophy: build less, sha
 
 ---
 
+### [steve-jobs-design-review](https://skills.wondel.ai/skills/steve-jobs-design-review/)
+
+Review designs, products, and features the way Steve Jobs ran reviews: start from the customer experience and work backwards, subtract until only the essential remains, demand working demos over specs, audit the whole experience end to end, and deliver a binary verdict — insanely great or not done — with a specific cut list and fix list.
+
+**About the source material:** Steve Jobs (1955-2011) co-founded Apple and led the creation of the Mac, iPod, iPhone, and iPad through famously demanding design reviews. This skill distills his documented review practices from [Walter Isaacson](https://x.com/WalterIsaacson)'s authorized biography [*"Steve Jobs"*](https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?tag=wondelai00-20), [Ken Segall](https://x.com/ksegall)'s [*"Insanely Simple"*](https://www.amazon.com/Insanely-Simple-Obsession-Drives-Success/dp/1591846218?tag=wondelai00-20), and [Ken Kocienda](https://x.com/kocienda)'s [*"Creative Selection"*](https://www.amazon.com/Creative-Selection-Inside-Apples-Process/dp/1250194466?tag=wondelai00-20).
+
+**Use when you need to:**
+- Run a brutal, specific design or product review with a clear verdict
+- Simplify a product drowning in features, settings, and steps
+- Cut a roadmap down to the few bets that matter (the no list, the 2×2 matrix)
+- Pressure-test the complete experience from first run to cancellation
+- Replace spec/slide reviews with a working-demo culture
+- Audit "back of the fence" surfaces: empty states, error copy, invoices
+
+**Example prompts:**
+- *"Here's my app's onboarding flow. Review it like Steve Jobs would — what gets cut? Use steve-jobs-design-review skill."*
+- *"Our SaaS has 14 nav items and 60 settings. Run a simplicity audit. Use steve-jobs-design-review skill."*
+- *"Review our landing page promise against what the product actually does on first run. Use steve-jobs-design-review skill."*
+- *"We're debating two competing designs. Set up a demo derby and pick a winner. Use steve-jobs-design-review skill."*
+
+---
+
 ## Learn More: The Skills Ecosystem
 
 Want to go deeper with skills — how they work, how to create your own, and what's available across the community?
@@ -1123,6 +1147,9 @@ The methodologies and frameworks referenced in these skills are the intellectual
 - **Getting Real**: Jason Fried, David Heinemeier Hansson
 - **Rework**: Jason Fried, David Heinemeier Hansson
 - **Shape Up**: Ryan Singer
+- **Steve Jobs**: Walter Isaacson
+- **Insanely Simple**: Ken Segall
+- **Creative Selection**: Ken Kocienda
 
 These skills were created without directly copying or reproducing content from the original books or materials. They are based on:
 - Publicly available information about the methodologies
