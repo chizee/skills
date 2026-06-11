@@ -1,20 +1,20 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "wondelai-skills",
-  "description": "43 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
+  "description": "50 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
   "owner": {
     "name": "Wondel.ai",
     "email": "hello@wondel.ai"
   },
   "metadata": {
-    "description": "43 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
-    "version": "1.4.0"
+    "description": "50 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books",
+    "version": "1.5.0"
   },
   "plugins": [
     {
       "name": "product-strategy",
-      "description": "Product strategy and innovation frameworks including Jobs to Be Done (Clayton Christensen) for customer discovery and product design, plus tactical negotiation skills (Chris Voss)",
-      "version": "1.0.0",
+      "description": "Product strategy and innovation frameworks including Jobs to Be Done (Clayton Christensen) for customer discovery and product design, tactical negotiation skills (Chris Voss), willingness-to-pay pricing (Monetizing Innovation), and startup metrics (Lean Analytics)",
+      "version": "1.1.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -23,13 +23,15 @@
       "repository": "https://github.com/wondelai/skills",
       "license": "MIT",
       "category": "productivity",
-      "keywords": ["product-strategy", "jobs-to-be-done", "negotiation", "customer-discovery", "innovation"],
+      "keywords": ["product-strategy", "jobs-to-be-done", "negotiation", "customer-discovery", "innovation", "pricing", "willingness-to-pay", "metrics", "analytics", "omtm"],
       "source": "./",
       "strict": false,
       "skills": [
         "./jobs-to-be-done",
         "./negotiation",
-        "./mom-test"
+        "./mom-test",
+        "./monetizing-innovation",
+        "./lean-analytics"
       ]
     },
     {
@@ -132,8 +134,8 @@
     },
     {
       "name": "strategy-growth",
-      "description": "Business strategy and growth frameworks including Crossing the Chasm tech adoption, Blue Ocean Strategy value innovation, EOS business operating system, and Obviously Awesome positioning",
-      "version": "1.0.0",
+      "description": "Business strategy and growth frameworks including Crossing the Chasm tech adoption, Blue Ocean Strategy value innovation, EOS business operating system, Obviously Awesome positioning, Good Strategy Bad Strategy kernels, and Cold Start Problem network effects",
+      "version": "1.1.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -142,20 +144,22 @@
       "repository": "https://github.com/wondelai/skills",
       "license": "MIT",
       "category": "productivity",
-      "keywords": ["strategy", "growth", "positioning", "blue-ocean", "eos", "go-to-market", "traction"],
+      "keywords": ["strategy", "growth", "positioning", "blue-ocean", "eos", "go-to-market", "traction", "strategy-kernel", "network-effects", "marketplace", "cold-start"],
       "source": "./",
       "strict": false,
       "skills": [
         "./crossing-the-chasm",
         "./blue-ocean-strategy",
         "./traction-eos",
-        "./obviously-awesome"
+        "./obviously-awesome",
+        "./good-strategy-bad-strategy",
+        "./cold-start-problem"
       ]
     },
     {
       "name": "team-motivation",
-      "description": "Team motivation and intrinsic drive framework based on Daniel Pink's Autonomy, Mastery, Purpose (AMP) principles for designing engaging products and teams",
-      "version": "1.0.0",
+      "description": "Team motivation and management skills including Daniel Pink's Autonomy, Mastery, Purpose (AMP) principles and Andy Grove's High Output Management (leverage, one-on-ones, OKRs, task-relevant maturity)",
+      "version": "1.1.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -164,17 +168,18 @@
       "repository": "https://github.com/wondelai/skills",
       "license": "MIT",
       "category": "productivity",
-      "keywords": ["motivation", "autonomy", "mastery", "purpose", "engagement", "team-management"],
+      "keywords": ["motivation", "autonomy", "mastery", "purpose", "engagement", "team-management", "management", "one-on-ones", "okrs", "leverage"],
       "source": "./",
       "strict": false,
       "skills": [
-        "./drive-motivation"
+        "./drive-motivation",
+        "./high-output-management"
       ]
     },
     {
       "name": "code-craftsmanship",
-      "description": "Code quality and software design skills including Clean Code (Robert C. Martin), Refactoring patterns (Martin Fowler), A Philosophy of Software Design (John Ousterhout), The Pragmatic Programmer (Hunt & Thomas), and Domain-Driven Design (Eric Evans)",
-      "version": "1.0.0",
+      "description": "Code quality and software design skills including Clean Code (Robert C. Martin), Refactoring patterns (Martin Fowler), A Philosophy of Software Design (John Ousterhout), The Pragmatic Programmer (Hunt & Thomas), Domain-Driven Design (Eric Evans), and Working Effectively with Legacy Code (Michael Feathers)",
+      "version": "1.1.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -183,7 +188,7 @@
       "repository": "https://github.com/wondelai/skills",
       "license": "MIT",
       "category": "productivity",
-      "keywords": ["clean-code", "refactoring", "code-quality", "software-design", "ddd", "domain-driven-design", "pragmatic"],
+      "keywords": ["clean-code", "refactoring", "code-quality", "software-design", "ddd", "domain-driven-design", "pragmatic", "legacy-code", "characterization-tests", "seams"],
       "source": "./",
       "strict": false,
       "skills": [
@@ -191,13 +196,14 @@
         "./refactoring-patterns",
         "./software-design-philosophy",
         "./pragmatic-programmer",
-        "./domain-driven-design"
+        "./domain-driven-design",
+        "./working-with-legacy-code"
       ]
     },
     {
       "name": "systems-architecture",
-      "description": "Systems architecture and distributed systems skills including Designing Data-Intensive Applications (Martin Kleppmann), System Design Interview (Alex Xu), Clean Architecture (Robert C. Martin), Release It! (Michael Nygard), and High Performance Browser Networking (Ilya Grigorik)",
-      "version": "1.0.0",
+      "description": "Systems architecture and distributed systems skills including Designing Data-Intensive Applications (Martin Kleppmann), System Design Interview (Alex Xu), Clean Architecture (Robert C. Martin), Release It! (Michael Nygard), High Performance Browser Networking (Ilya Grigorik), and Team Topologies (Skelton & Pais)",
+      "version": "1.1.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -206,7 +212,7 @@
       "repository": "https://github.com/wondelai/skills",
       "license": "MIT",
       "category": "productivity",
-      "keywords": ["system-design", "architecture", "distributed-systems", "scalability", "resilience", "performance", "clean-architecture"],
+      "keywords": ["system-design", "architecture", "distributed-systems", "scalability", "resilience", "performance", "clean-architecture", "team-topologies", "conways-law", "platform-teams", "org-design"],
       "source": "./",
       "strict": false,
       "skills": [
@@ -214,7 +220,8 @@
         "./system-design",
         "./clean-architecture",
         "./release-it",
-        "./high-perf-browser"
+        "./high-perf-browser",
+        "./team-topologies"
       ]
     }
   ]

@@ -74,6 +74,13 @@ npx skills add wondelai/skills/release-it
 npx skills add wondelai/skills/high-perf-browser
 npx skills add wondelai/skills/37signals-way
 npx skills add wondelai/skills/steve-jobs-design-review
+npx skills add wondelai/skills/good-strategy-bad-strategy
+npx skills add wondelai/skills/monetizing-innovation
+npx skills add wondelai/skills/cold-start-problem
+npx skills add wondelai/skills/working-with-legacy-code
+npx skills add wondelai/skills/team-topologies
+npx skills add wondelai/skills/high-output-management
+npx skills add wondelai/skills/lean-analytics
 ```
 
 ## Available Skills
@@ -123,8 +130,15 @@ npx skills add wondelai/skills/steve-jobs-design-review
 | [high-perf-browser](https://skills.wondel.ai/skills/high-perf-browser/) | Web performance: network protocols, resource loading, browser rendering | [Ilya Grigorik](https://x.com/igrigorik)'s [*"High Performance Browser Networking"*](https://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763?tag=wondelai00-20) |
 | [37signals-way](https://skills.wondel.ai/skills/37signals-way/) | Build less, shape work, ship in six-week cycles with small autonomous teams | [Jason Fried](https://x.com/jasonfried) & [DHH](https://x.com/dhh)'s [*"Getting Real"*](https://www.amazon.com/Getting-Real-Smarter-Successful-Application/dp/0578012812?tag=wondelai00-20), [*"Rework"*](https://www.amazon.com/Rework-Jason-Fried/dp/0307463745?tag=wondelai00-20) & [Ryan Singer](https://x.com/rjs)'s [*"Shape Up"*](https://www.amazon.com/Shape-Up-Circles-Ship-Work/dp/B09ZSY1MWP?tag=wondelai00-20) |
 | [steve-jobs-design-review](https://skills.wondel.ai/skills/steve-jobs-design-review/) | Jobs-style design reviews: ruthless simplicity, focus, demo culture, binary verdicts | [Walter Isaacson](https://x.com/WalterIsaacson)'s [*"Steve Jobs"*](https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?tag=wondelai00-20), [Ken Segall](https://x.com/ksegall)'s [*"Insanely Simple"*](https://www.amazon.com/Insanely-Simple-Obsession-Drives-Success/dp/1591846218?tag=wondelai00-20) & [Ken Kocienda](https://x.com/kocienda)'s [*"Creative Selection"*](https://www.amazon.com/Creative-Selection-Inside-Apples-Process/dp/1250194466?tag=wondelai00-20) |
+| [good-strategy-bad-strategy](https://skills.wondel.ai/skills/good-strategy-bad-strategy/) | Strategy kernels: diagnosis, guiding policy, coherent action — and bad-strategy detection | Richard Rumelt's [*"Good Strategy Bad Strategy"*](https://www.amazon.com/Good-Strategy-Bad-Strategy-Difference/dp/0307886239?tag=wondelai00-20) |
+| [monetizing-innovation](https://skills.wondel.ai/skills/monetizing-innovation/) | Price-before-product: willingness-to-pay research, packaging, monetization models | Madhavan Ramanujam & Georg Tacke's [*"Monetizing Innovation"*](https://www.amazon.com/Monetizing-Innovation-Companies-Design-Product/dp/1119240867?tag=wondelai00-20) |
+| [cold-start-problem](https://skills.wondel.ai/skills/cold-start-problem/) | Network effects: atomic networks, the hard side, tipping points, escape velocity | [Andrew Chen](https://x.com/andrewchen)'s [*"The Cold Start Problem"*](https://www.amazon.com/Cold-Start-Problem-Andrew-Chen/dp/0062969749?tag=wondelai00-20) |
+| [working-with-legacy-code](https://skills.wondel.ai/skills/working-with-legacy-code/) | Safely change untested code: seams, characterization tests, sprout/wrap, dependency breaking | [Michael Feathers](https://x.com/mfeathers)' [*"Working Effectively with Legacy Code"*](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052?tag=wondelai00-20) |
+| [team-topologies](https://skills.wondel.ai/skills/team-topologies/) | Four team types, three interaction modes, Conway's law, team cognitive load | [Matthew Skelton](https://x.com/matthewpskelton) & [Manuel Pais](https://x.com/manupaisable)'s [*"Team Topologies"*](https://www.amazon.com/Team-Topologies-Organizing-Business-Technology/dp/1942788819?tag=wondelai00-20) |
+| [high-output-management](https://skills.wondel.ai/skills/high-output-management/) | Managerial leverage, one-on-ones, OKRs, task-relevant maturity | Andrew S. Grove's [*"High Output Management"*](https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884?tag=wondelai00-20) |
+| [lean-analytics](https://skills.wondel.ai/skills/lean-analytics/) | One Metric That Matters, metrics by business model and stage, benchmarks | [Alistair Croll](https://x.com/acroll) & [Ben Yoskovitz](https://x.com/byosko)'s [*"Lean Analytics"*](https://www.amazon.com/Lean-Analytics-Better-Startup-Faster/dp/1449335675?tag=wondelai00-20) |
 
-> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 73 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs).
+> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 80 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs).
 
 ---
 
@@ -1083,6 +1097,153 @@ Review designs, products, and features the way Steve Jobs ran reviews: start fro
 
 ---
 
+### [good-strategy-bad-strategy](https://skills.wondel.ai/skills/good-strategy-bad-strategy/)
+
+Formulate and audit real strategy using the kernel — an honest diagnosis of the challenge, a guiding policy that rules out vast realms of action, and coherent actions that reinforce each other — and detect the four hallmarks of bad strategy: fluff, failure to face the challenge, mistaking goals for strategy, and bad strategic objectives.
+
+**About the author:** Richard Rumelt is professor emeritus at UCLA Anderson School of Management and one of the world's most influential thinkers on strategy — The Economist called him a "strategist's strategist." He is the author of [*"Good Strategy Bad Strategy"*](https://www.amazon.com/Good-Strategy-Bad-Strategy-Difference/dp/0307886239?tag=wondelai00-20) and [*"The Crux"*](https://www.amazon.com/Crux-How-Leaders-Become-Strategists/dp/1541701240?tag=wondelai00-20).
+
+**Use when you need to:**
+- Audit a strategy doc, pitch deck, or annual plan for fluff and goals-masquerading-as-strategy
+- Write a strategy kernel: diagnosis, guiding policy, coherent actions
+- Find sources of power: leverage, proximate objectives, chain-link systems, design
+- Ride waves of change and exploit incumbent inertia
+- Turn a list of ambitions into a focused, resourced plan
+
+**Example prompts:**
+- *"Here's our annual plan. Audit it for bad strategy — fluff, missing diagnosis, goals instead of strategy. Use good-strategy-bad-strategy skill."*
+- *"Help me write a strategy kernel for our developer-tools startup. Use good-strategy-bad-strategy skill."*
+- *"We have 12 strategic priorities this year. Help us concentrate on a proximate objective. Use good-strategy-bad-strategy skill."*
+- *"Our competitor is 10x bigger. Find asymmetries and leverage we can build a strategy around. Use good-strategy-bad-strategy skill."*
+
+---
+
+### [monetizing-innovation](https://skills.wondel.ai/skills/monetizing-innovation/)
+
+Design the product around the price instead of bolting a price onto a finished product: validate willingness to pay early, segment by value, package with leader/filler/killer logic, pick the right monetization model, and avoid the four monetization failures — feature shock, minivation, hidden gems, and undead products.
+
+**About the authors:** Madhavan Ramanujam is a board member and partner at Simon-Kucher & Partners, the world's leading pricing consultancy, and has advised dozens of unicorns on monetization. Georg Tacke was co-CEO of Simon-Kucher. Together they wrote [*"Monetizing Innovation"*](https://www.amazon.com/Monetizing-Innovation-Companies-Design-Product/dp/1119240867?tag=wondelai00-20).
+
+**Use when you need to:**
+- Set or change pricing for a product, plan, or feature
+- Run willingness-to-pay conversations before building
+- Design pricing tiers and packages (good-better-best, leader/filler/killer features)
+- Choose between subscription, usage-based, freemium, and outcome-based models
+- Diagnose why a launch is underperforming its revenue potential
+
+**Example prompts:**
+- *"We're launching a SaaS product in 3 months and haven't validated pricing. Design the WTP research. Use monetizing-innovation skill."*
+- *"Audit our pricing page and tier structure for leader/filler/killer mistakes. Use monetizing-innovation skill."*
+- *"Are we heading toward feature shock, minivation, hidden gem, or undead? Diagnose our roadmap. Use monetizing-innovation skill."*
+- *"Should we price per seat or per usage? Help us pick the right price metric. Use monetizing-innovation skill."*
+
+---
+
+### [cold-start-problem](https://skills.wondel.ai/skills/cold-start-problem/)
+
+Start and scale products with network effects: launch one atomic network at a time, solve the hard side first, tip markets with repeatable playbooks, then manage escape velocity, ceilings, and moats as the network grows.
+
+**About the author:** [Andrew Chen](https://x.com/andrewchen) is a general partner at Andreessen Horowitz investing in consumer technology, previously led rider growth at Uber, and writes one of the most-read essay series on growth and network effects. He is the author of [*"The Cold Start Problem"*](https://www.amazon.com/Cold-Start-Problem-Andrew-Chen/dp/0062969749?tag=wondelai00-20).
+
+**Use when you need to:**
+- Launch a marketplace, social, or collaboration product that's worthless when empty
+- Define your atomic network and magic moment
+- Identify and win the hard side (creators, sellers, supply)
+- Design invite-only launches, seeding, and subsidies that tip markets
+- Diagnose stalled network growth, degradation, or competitive attacks
+
+**Example prompts:**
+- *"We're launching a B2B marketplace. Define our atomic network and the first market to tip. Use cold-start-problem skill."*
+- *"Our app has 50K signups but dead feeds. Diagnose the network quality problem. Use cold-start-problem skill."*
+- *"Who is the hard side of our network and what playbook wins them? Use cold-start-problem skill."*
+- *"Design an invite-only launch with waitlist mechanics for our social product. Use cold-start-problem skill."*
+
+---
+
+### [working-with-legacy-code](https://skills.wondel.ai/skills/working-with-legacy-code/)
+
+Safely change untested codebases: find seams, break dependencies just enough to get tests in place, pin current behavior with characterization tests, and use sprout/wrap techniques when you can't get the area under test yet — legacy code is simply code without tests.
+
+**About the author:** [Michael C. Feathers](https://x.com/mfeathers) is the founder of R7K Research & Conveyance and a long-time consultant on software design and legacy systems. He wrote [*"Working Effectively with Legacy Code"*](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052?tag=wondelai00-20), which defined legacy code as code without tests.
+
+**Use when you need to:**
+- Add a feature or fix a bug in code with no tests
+- Get a class under test when constructors, statics, or singletons block you
+- Write characterization tests that pin down current behavior before refactoring
+- Apply sprout method/class or wrap method when there's no time to test first
+- Untangle monster methods and god classes incrementally
+
+**Example prompts:**
+- *"I need to change this 800-line untested service class. Walk me through the legacy code change algorithm. Use working-with-legacy-code skill."*
+- *"This module uses singletons everywhere and I can't unit test it. Find the seams. Use working-with-legacy-code skill."*
+- *"Write characterization tests for this function before we refactor it. Use working-with-legacy-code skill."*
+- *"We want to add behavior to a tangled module without making it worse. Sprout or wrap? Use working-with-legacy-code skill."*
+
+---
+
+### [team-topologies](https://skills.wondel.ai/skills/team-topologies/)
+
+Organize teams for fast flow using four fundamental team types (stream-aligned, enabling, complicated-subsystem, platform) and three interaction modes (collaboration, X-as-a-Service, facilitating), sized to team cognitive load and aligned with the architecture you want via the inverse Conway maneuver.
+
+**About the authors:** [Matthew Skelton](https://x.com/matthewpskelton) is the founder of Conflux and a leading voice on organizational design for software delivery. [Manuel Pais](https://x.com/manupaisable) is an independent IT organizational consultant. Together they wrote [*"Team Topologies"*](https://www.amazon.com/Team-Topologies-Organizing-Business-Technology/dp/1942788819?tag=wondelai00-20).
+
+**Use when you need to:**
+- Reorganize engineering teams around the architecture you want (inverse Conway)
+- Decide whether a team should be stream-aligned, enabling, complicated-subsystem, or platform
+- Reduce cross-team dependencies, handoffs, and meeting overload
+- Split a monolith along fracture planes and assign clear ownership
+- Design an internal platform that teams actually want to use
+
+**Example prompts:**
+- *"We have 40 engineers and every feature needs 4 teams. Redesign our team topology. Use team-topologies skill."*
+- *"Classify each of our teams by type and flag the anti-patterns. Use team-topologies skill."*
+- *"We're splitting our monolith — propose fracture planes and team ownership. Use team-topologies skill."*
+- *"Our ops team is a ticket-queue bottleneck. Turn it into a platform team. Use team-topologies skill."*
+
+---
+
+### [high-output-management](https://skills.wondel.ai/skills/high-output-management/)
+
+Manage for output, not activity: a manager's output is the output of their organization, raised through high-leverage activities — training, well-run one-on-ones, clear decisions, honest indicators, and management style matched to each person's task-relevant maturity.
+
+**About the author:** Andrew S. Grove (1936-2016) escaped communist Hungary, became Intel's third employee, and led the company as president, CEO, and chairman through its pivot from memory chips to microprocessors. His book [*"High Output Management"*](https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884?tag=wondelai00-20) is the origin of OKRs and a foundational text for Silicon Valley managers.
+
+**Use when you need to:**
+- Restructure a manager's calendar around high-leverage activities
+- Run one-on-ones, staff meetings, and operation reviews that raise output
+- Design team indicators with pairing metrics that can't be gamed
+- Write OKRs the way Grove intended (and keep them away from compensation)
+- Match management style to task-relevant maturity and fix performance reviews
+
+**Example prompts:**
+- *"I'm a new engineering manager drowning in meetings. Audit my week for leverage. Use high-output-management skill."*
+- *"Design 1:1 agendas and cadence for my team of 6. Use high-output-management skill."*
+- *"Our velocity is up but quality is down. Design pairing indicators. Use high-output-management skill."*
+- *"Help me cascade company OKRs to my team without turning them into a compensation formula. Use high-output-management skill."*
+
+---
+
+### [lean-analytics](https://skills.wondel.ai/skills/lean-analytics/)
+
+Choose the One Metric That Matters for your business model and stage, kill vanity metrics, and set lines in the sand: good metrics are comparative, understandable, ratios or rates, and change your behavior — everything else is noise that feels like progress.
+
+**About the authors:** [Alistair Croll](https://x.com/acroll) is an entrepreneur and analyst who co-founded Coradiant and chairs Startupfest. [Ben Yoskovitz](https://x.com/byosko) is a founding partner at Highline Beta and a serial founder and investor. Together they wrote [*"Lean Analytics"*](https://www.amazon.com/Lean-Analytics-Better-Startup-Faster/dp/1449335675?tag=wondelai00-20).
+
+**Use when you need to:**
+- Pick the metrics (and the One Metric That Matters) for your product or feature
+- Audit a dashboard for vanity metrics and replace them with actionable ones
+- Instrument a product by business model (SaaS, marketplace, e-commerce, media, UGC, mobile)
+- Figure out which stage you're at (empathy, stickiness, virality, revenue, scale) and what gates the next one
+- Set realistic targets and baselines when you have no benchmarks
+
+**Example prompts:**
+- *"Our dashboard has 34 widgets and no one looks at it. Pick our OMTM and counter-metric. Use lean-analytics skill."*
+- *"We're a two-sided marketplace. Define our liquidity metrics and instrumentation plan. Use lean-analytics skill."*
+- *"Are these metrics vanity or actionable? Audit and rewrite them. Use lean-analytics skill."*
+- *"Should we spend on growth yet, or fix stickiness first? Use lean-analytics skill."*
+
+---
+
 ## Learn More: The Skills Ecosystem
 
 Want to go deeper with skills — how they work, how to create your own, and what's available across the community?
@@ -1150,6 +1311,13 @@ The methodologies and frameworks referenced in these skills are the intellectual
 - **Steve Jobs**: Walter Isaacson
 - **Insanely Simple**: Ken Segall
 - **Creative Selection**: Ken Kocienda
+- **Good Strategy Bad Strategy**: Richard P. Rumelt
+- **Monetizing Innovation**: Madhavan Ramanujam, Georg Tacke
+- **The Cold Start Problem**: Andrew Chen
+- **Working Effectively with Legacy Code**: Michael C. Feathers
+- **Team Topologies**: Matthew Skelton, Manuel Pais
+- **High Output Management**: Andrew S. Grove
+- **Lean Analytics**: Alistair Croll, Benjamin Yoskovitz
 
 These skills were created without directly copying or reproducing content from the original books or materials. They are based on:
 - Publicly available information about the methodologies

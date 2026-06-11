@@ -231,6 +231,94 @@ Use continuous-discovery and mom-test skills.
 
 ---
 
+### Turn Your Annual Plan Into a Real Strategy
+
+> Your "strategy" deck is a list of ambitions — grow 40%, expand to Europe, ship AI features — with no diagnosis and no choices.
+
+**Prompt:**
+
+```
+Here's our annual plan for our B2B scheduling SaaS
+(20 people, $2M ARR, growth slowing):
+- Grow ARR 40%
+- Launch AI assistant
+- Expand to EU market
+- Improve NPS to 50
+- Become the category leader
+
+Audit it as strategy:
+(1) Flag fluff, missing diagnosis, and goals
+    masquerading as strategy
+(2) Write a proper kernel: diagnosis of our critical
+    challenge, a guiding policy, 3-5 coherent actions
+(3) Propose one proximate objective for the next
+    two quarters
+(4) List what this strategy explicitly says NO to
+
+Use good-strategy-bad-strategy skill.
+```
+
+**Skills used:** good-strategy-bad-strategy
+
+---
+
+### Validate Willingness to Pay Before You Build
+
+> You're three months from launch and pricing is still a placeholder copied from a competitor.
+
+**Prompt:**
+
+```
+We're launching a contract-review tool for in-house
+legal teams. Pricing page currently says $49/user/month
+because a competitor charges that. We've never asked
+a customer what they'd pay.
+
+Design our monetization before we finish building:
+(1) WTP interview script for our next 10 customer calls
+    (direct, purchase-probability, and acceptable/
+    expensive/prohibitive price questions)
+(2) Classify our 14 planned features into
+    leaders, fillers, and killers
+(3) Draft a good-better-best package structure
+(4) Tell us if we're heading toward feature shock,
+    minivation, hidden gem, or undead
+
+Use monetizing-innovation skill.
+```
+
+**Skills used:** monetizing-innovation
+
+---
+
+### Launch a Marketplace That's Empty on Day One
+
+> Your two-sided marketplace is worthless without supply, and you can't get supply without demand.
+
+**Prompt:**
+
+```
+We're building a marketplace where independent personal
+trainers sell sessions to gym-goers. Classic chicken-and-egg:
+no trainers means no buyers, no buyers means no trainers.
+
+Build our cold-start plan:
+(1) Define our atomic network: smallest combination of
+    trainers + clients + geography that's self-sustaining
+(2) Identify the hard side and the playbook to win them
+    (tools? subsidies? status?)
+(3) Design the launch: one city or one niche? invite-only
+    or open? what do we flintstone manually?
+(4) Define the liquidity metrics that tell us the first
+    market has tipped
+
+Use cold-start-problem skill.
+```
+
+**Skills used:** cold-start-problem
+
+---
+
 ## Product Managers (Scale-Up)
 
 You're past product-market fit and focused on retention, feature prioritization, team alignment, and competitive moats.
@@ -580,6 +668,35 @@ Use 37signals-way skill.
 ```
 
 **Skills used:** 37signals-way
+
+---
+
+### Pick the One Metric That Matters
+
+> Your analytics dashboard has 34 widgets, every meeting cites a different number, and nobody can say if last month was good.
+
+**Prompt:**
+
+```
+We're a B2B SaaS (team collaboration, $480K MRR,
+sales-assisted + self-serve). Our dashboard tracks
+34 metrics and leadership argues about which ones count.
+
+Fix our metrics:
+(1) Identify which of our current metrics are vanity
+    metrics and what to replace them with
+(2) Given our model and stage, pick our One Metric
+    That Matters plus a counter-metric that keeps it
+    honest
+(3) Draw a line in the sand: target, timeframe, and
+    what we commit to doing if we miss
+(4) Design the one-screen dashboard: OMTM big,
+    max 6 supporting metrics
+
+Use lean-analytics skill.
+```
+
+**Skills used:** lean-analytics
 
 ---
 
@@ -1777,6 +1894,35 @@ Use high-perf-browser skill.
 
 ---
 
+### Change Untested Legacy Code Safely
+
+> You have to add a feature to an 800-line service class with zero tests, and every change so far has caused a regression.
+
+**Prompt:**
+
+```
+I need to add multi-currency support to our
+OrderService — 800 lines, no tests, constructor
+news up a database connection and a payment gateway,
+and three other modules depend on its statics.
+
+Walk me through it:
+(1) Apply the legacy code change algorithm: where are
+    the change points and the nearest test points?
+(2) Find the seams — what's the least invasive way to
+    break the database and gateway dependencies?
+(3) Write characterization tests that pin down current
+    pricing behavior before I touch anything
+(4) If part of it can't be tested in time, show me
+    sprout method/class for the new currency logic
+
+Use working-with-legacy-code skill.
+```
+
+**Skills used:** working-with-legacy-code
+
+---
+
 ## Tech Leads & Architects
 
 You design systems, review architecture, mentor engineers, and make decisions that are expensive to reverse.
@@ -1951,6 +2097,67 @@ Use domain-driven-design and clean-architecture skills.
 
 ---
 
+### Reorganize Teams Around the Architecture You Want
+
+> Every feature needs four teams, handoffs eat weeks, and your "DevOps team" is a ticket-queue bottleneck.
+
+**Prompt:**
+
+```
+We have 40 engineers in 6 teams: frontend, backend,
+mobile, QA, DevOps, and "core platform" (actually a
+shared-services catch-all). Every feature crosses 4 teams
+and our lead time is 6 weeks for small changes.
+
+Redesign our topology:
+(1) Classify each current team against the four
+    fundamental types and flag the anti-patterns
+(2) Propose stream-aligned teams around our main
+    value streams, sized by cognitive load
+(3) Turn DevOps into a real platform team — what's our
+    Thinnest Viable Platform?
+(4) Define explicit interaction modes between each
+    team pair, and which collaborations get time-boxed
+(5) Sequence the reorg as an inverse Conway maneuver
+
+Use team-topologies skill.
+```
+
+**Skills used:** team-topologies
+
+---
+
+### Raise Your Output as a Manager
+
+> You became an engineering manager six months ago, your calendar is wall-to-wall meetings, and your team ships less than before.
+
+**Prompt:**
+
+```
+I manage 7 engineers. My week: 23 meetings, no time to
+think, 1:1s constantly rescheduled, and I still review
+every PR myself because "it's faster".
+
+Rebuild my management system:
+(1) Audit my week for managerial leverage — what are the
+    high-leverage activities I'm skipping and the
+    negative-leverage habits (like being the PR
+    bottleneck)?
+(2) Design my 1:1s: cadence per person based on
+    task-relevant maturity, subordinate-owned agenda,
+    the hold list
+(3) Set up 4-6 team indicators with pairing indicators
+    so we measure output, not activity
+(4) Show me delegation without abdication for code
+    reviews — monitoring depth by TRM
+
+Use high-output-management skill.
+```
+
+**Skills used:** high-output-management
+
+---
+
 ## Skill Index
 
 Quick reference showing where each skill appears in the examples above.
@@ -2000,3 +2207,10 @@ Quick reference showing where each skill appears in the examples above.
 | high-perf-browser | Software Engineers |
 | 37signals-way | Product Managers |
 | steve-jobs-design-review | Product Managers, UX/UI Designers |
+| good-strategy-bad-strategy | Startup Founders |
+| monetizing-innovation | Startup Founders |
+| cold-start-problem | Startup Founders |
+| lean-analytics | Product Managers |
+| working-with-legacy-code | Software Engineers |
+| team-topologies | Tech Leads |
+| high-output-management | Tech Leads |
