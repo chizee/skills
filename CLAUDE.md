@@ -59,28 +59,25 @@ Intro paragraph about the framework.
 
 ## Scoring
 
-**Goal: 10/10.** Rate 0-10 based on adherence to the principles below...
+**Goal: 10/10.** Score with a reproducible rule tied to the Quick Diagnostic that spans the full 0-10 — e.g. `score = round(rows passed / N × 10)` — then spell out the 9-10 / 7-8 / 5-6 / <=3 bands. (Don't write "1 point per row" when there are fewer than 10 rows: the top band becomes unreachable.)
 
 ## Framework Sections
 
 ### 1. First Section
 
 **Core concept:** ...
-**Why it works:** ...
-**Key insights:** (bullet list)
+**Why it works:** ... (only when it states a real mechanism — cut if it just restates the Core concept)
+**Key insights:** (bullet list of non-obvious points only)
 **Product applications:** (table: Context | Application | Example)
 **Copy patterns:** (bullet list with quoted examples)
-**Ethical boundary:** ...
-See: [references/file.md](references/file.md)
+**Ethical boundary:** ... (only when a concrete, behavior-changing constraint — omit platitudes the model already follows)
+See [references/file.md](references/file.md) when <situation> — <what it adds>   (inline when-to-read pointer, at the point of need; no trailing roster)
 
 ## Common Mistakes
 (Table: Mistake | Why It Fails | Fix)
 
 ## Quick Diagnostic
 (Table: Question | If No | Action)
-
-## Reference Files
-(List with descriptions)
 
 ## Further Reading
 (Amazon links with ?tag=wondelai00-20)
