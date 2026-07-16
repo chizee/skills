@@ -8,13 +8,13 @@
   },
   "metadata": {
     "description": "62 agent skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture — based on bestselling books — plus 12 guided-journey metaskills that orchestrate them step by step",
-    "version": "1.4.0"
+    "version": "1.5.0"
   },
   "plugins": [
     {
       "name": "product-strategy",
       "description": "Product strategy and innovation frameworks including Jobs to Be Done (Clayton Christensen) for customer discovery and product design, tactical negotiation skills (Chris Voss), willingness-to-pay pricing (Monetizing Innovation), and startup metrics (Lean Analytics)",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -53,7 +53,7 @@
     {
       "name": "ux-design",
       "description": "UX and UI design skills including Refactoring UI, iOS HIG design, usability heuristics, habit-forming product design, behavior design for retention, web typography, award-winning top-design, Steve Jobs-style design reviews, and Don Norman's foundational design principles",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -103,7 +103,7 @@
     {
       "name": "marketing-cro",
       "description": "Marketing and conversion optimization skills including CRO methodology, StoryBrand messaging, Scorecard Marketing lead generation, viral marketing (Contagious), and 1-Page Marketing Plan",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -139,7 +139,7 @@
     {
       "name": "sales-influence",
       "description": "Sales, persuasion, and messaging skills including Cialdini's influence psychology, Aaron Ross's outbound sales methodology, Heath Brothers' sticky messaging, and Alex Hormozi's offer creation",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -174,7 +174,7 @@
     {
       "name": "product-innovation",
       "description": "Product innovation and validation frameworks including Lean Startup methodology, Google Ventures Design Sprint, and Don Norman's design principles",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -209,7 +209,7 @@
     {
       "name": "strategy-growth",
       "description": "Business strategy and growth frameworks including Crossing the Chasm tech adoption, Blue Ocean Strategy value innovation, EOS business operating system, Obviously Awesome positioning, Good Strategy Bad Strategy kernels, and Cold Start Problem network effects",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -249,7 +249,7 @@
     {
       "name": "team-motivation",
       "description": "Team motivation and management skills including Daniel Pink's Autonomy, Mastery, Purpose (AMP) principles and Andy Grove's High Output Management (leverage, one-on-ones, OKRs, task-relevant maturity)",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -284,7 +284,7 @@
     {
       "name": "code-craftsmanship",
       "description": "Code quality and software design skills including Clean Code (Robert C. Martin), Refactoring patterns (Martin Fowler), A Philosophy of Software Design (John Ousterhout), The Pragmatic Programmer (Hunt & Thomas), Domain-Driven Design (Eric Evans), and Working Effectively with Legacy Code (Michael Feathers)",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -324,7 +324,7 @@
     {
       "name": "systems-architecture",
       "description": "Systems architecture and distributed systems skills including Designing Data-Intensive Applications (Martin Kleppmann), System Design Interview (Alex Xu), Clean Architecture (Robert C. Martin), Release It! (Michael Nygard), High Performance Browser Networking (Ilya Grigorik), and Team Topologies (Skelton & Pais)",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
@@ -365,7 +365,7 @@
     {
       "name": "metaskills",
       "description": "Twelve guided journeys that orchestrate the whole skill library step by step — create, improve, and grow a business, website, or app, plus improve code quality, remove technical debt, and design code architecture. Each metaskill invokes the right skills phase by phase, asks the user questions at every decision point, and records results as living documents in the project docs/ folder",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "Wondel.ai",
         "url": "https://wondel.ai"
