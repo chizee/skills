@@ -2158,6 +2158,238 @@ Use high-output-management skill.
 
 ---
 
+## Guided Journeys (Metaskills)
+
+One prompt, a whole journey. Each metaskill orchestrates the skills above phase by phase, asks you the decision questions, and keeps its state in your project's `docs/` folder — so you can stop anytime and resume later.
+
+### Take a Business Idea from Hunch to Launch
+
+> You have an idea and savings for six months. You want evidence before you build anything.
+
+**Prompt:**
+
+```
+I want to start a business: [describe the idea in 2-3 sentences].
+Guide me through the whole journey — validating the job to be done,
+customer interviews, strategy, positioning, offer, and pricing.
+Ask me the decision questions at each phase and keep our progress
+in docs/ so we can continue tomorrow.
+
+Use create-business skill.
+```
+
+**Skills used:** create-business (orchestrates jobs-to-be-done, mom-test, design-sprint, lean-startup, good-strategy-bad-strategy, blue-ocean-strategy, obviously-awesome, hundred-million-offers, monetizing-innovation, crossing-the-chasm)
+
+---
+
+### Build a Website That Converts, in the Right Order
+
+> You need a marketing site and don't want to discover after launch that the message was wrong.
+
+**Prompt:**
+
+```
+We're building the website for [product]. Run the full journey:
+lock the message first, then design system and typography, then
+conversion engineering and lead capture, and finish with a brutal
+design review. Check with me before each phase.
+
+Use create-website skill.
+```
+
+**Skills used:** create-website (orchestrates one-page-marketing, storybrand-messaging, made-to-stick, top-design, web-typography, refactoring-ui, ux-heuristics, cro-methodology, scorecard-marketing, steve-jobs-design-review)
+
+---
+
+### Start an App with Validation AND Sound Architecture
+
+> You want to move fast, but not by mortgaging the codebase in week one.
+
+**Prompt:**
+
+```
+New app: [describe]. Take me through the create-app journey —
+validate the riskiest assumption first, then make the
+expensive-to-reverse architecture decisions deliberately,
+and record everything in docs/.
+
+Use create-app skill.
+```
+
+**Skills used:** create-app (orchestrates lean-startup, design-sprint, clean-architecture, domain-driven-design, clean-code, pragmatic-programmer, system-design, ios-hig-design, 37signals-way, software-design-philosophy)
+
+---
+
+### Diagnose and Fix a Plateaued Business
+
+> Revenue has been flat for three quarters and every fix so far was a guess.
+
+**Prompt:**
+
+```
+Our business has plateaued: [paste context — what you sell, team
+size, what's been tried]. Run the improve-business journey starting
+with a proper diagnosis. Don't let me jump to solutions before the
+diagnosis is confirmed.
+
+Use improve-business skill.
+```
+
+**Skills used:** improve-business (orchestrates good-strategy-bad-strategy, traction-eos, high-output-management, team-topologies, drive-motivation, lean-analytics, negotiation, monetizing-innovation)
+
+---
+
+### Fix a Website That Doesn't Convert
+
+> Traffic is fine; signups aren't. You want evidence-driven fixes, not a redesign lottery.
+
+**Prompt:**
+
+```
+Our site gets [N] visits/month but converts at [X]%. Run the
+improve-website journey: diagnose why visitors leave, then fix
+usability, hierarchy, typography, message, and speed — every
+change as a testable experiment in docs/EXPERIMENTS.md.
+
+Use improve-website skill.
+```
+
+**Skills used:** improve-website (orchestrates cro-methodology, ux-heuristics, refactoring-ui, web-typography, storybrand-messaging, high-perf-browser, made-to-stick, design-everyday-things)
+
+---
+
+### Improve an App Without Rewriting It
+
+> The app works, but the code is rough, production is shaky, and the UX has friction everywhere.
+
+**Prompt:**
+
+```
+Improve this app end to end — code quality, safe refactoring,
+production hardening, data layer, then UX polish and a final
+cold review. Work incrementally; no rewrites. Track debt and
+decisions in docs/.
+
+Use improve-app skill.
+```
+
+**Skills used:** improve-app (orchestrates clean-code, refactoring-patterns, working-with-legacy-code, software-design-philosophy, release-it, ddia-systems, microinteractions, ux-heuristics, high-perf-browser, pragmatic-programmer, steve-jobs-design-review)
+
+---
+
+### Build a Repeatable Growth Engine
+
+> You have customers and word-of-mouth, but growth is ad hoc and unowned.
+
+**Prompt:**
+
+```
+We're at [revenue/stage] and growth is improvised. Run the
+grow-business journey: marketing operating system, offer,
+outbound pipeline, word-of-mouth, and metrics — each phase
+feeding the next, recorded in docs/.
+
+Use grow-business skill.
+```
+
+**Skills used:** grow-business (orchestrates one-page-marketing, hundred-million-offers, predictable-revenue, contagious, influence-psychology, crossing-the-chasm, cold-start-problem, lean-analytics, negotiation)
+
+---
+
+### Grow a Website Without Buying More Traffic
+
+> Before spending on ads, you want the traffic you already have to convert and spread.
+
+**Prompt:**
+
+```
+Grow our website's output: diagnose conversion first, capture the
+97% who leave, sharpen the message and offer, then make results
+shareable. Ask me before each phase and keep the plan in docs/.
+
+Use grow-website skill.
+```
+
+**Skills used:** grow-website (orchestrates cro-methodology, scorecard-marketing, storybrand-messaging, made-to-stick, influence-psychology, hundred-million-offers, contagious, one-page-marketing)
+
+---
+
+### Grow an App Retention-First
+
+> Users sign up, poke around, and vanish. Buying more of them won't help.
+
+**Prompt:**
+
+```
+Our app's D30 retention is [X]%. Run the grow-app journey —
+habit loops, activation, weekly discovery, and the One Metric
+That Matters — before any acquisition spend. Keep growth
+experiments in docs/EXPERIMENTS.md.
+
+Use grow-app skill.
+```
+
+**Skills used:** grow-app (orchestrates hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions, drive-motivation)
+
+---
+
+### Take a Vibe-Coded Prototype to Production
+
+> The demo works. The code was written by vibes. Launch is in six weeks.
+
+**Prompt:**
+
+```
+This repo is a working prototype built fast and untested. Run the
+improve-code-quality journey: safety net first, then readability,
+structure, production hardening, and honest scaling decisions.
+Structural and behavioral changes in separate commits.
+
+Use improve-code-quality skill.
+```
+
+**Skills used:** improve-code-quality (orchestrates working-with-legacy-code, clean-code, refactoring-patterns, software-design-philosophy, clean-architecture, pragmatic-programmer, release-it, system-design, ddia-systems)
+
+---
+
+### Dig a Codebase Out of Technical Debt
+
+> Every change breaks something, nobody dares touch the core, and a rewrite is off the table.
+
+**Prompt:**
+
+```
+Our [age]-year-old codebase is buried in debt: [paste symptoms].
+Run the remove-technical-debt journey — characterization tests
+before any change, named refactorings, boundaries, and a debt
+ledger in docs/TECH-DEBT.md. We keep shipping throughout.
+
+Use remove-technical-debt skill.
+```
+
+**Skills used:** remove-technical-debt (orchestrates working-with-legacy-code, refactoring-patterns, clean-code, software-design-philosophy, clean-architecture, pragmatic-programmer, release-it, domain-driven-design)
+
+---
+
+### Design the Architecture Before the Code Locks It In
+
+> A new system is starting; the first sprint's shortcuts will become the permanent architecture unless you decide now.
+
+**Prompt:**
+
+```
+We're designing [system] expecting [load/scale context]. Run the
+design-code-architecture journey: boundaries, domain model, honest
+sizing, data decisions, failure design — every expensive-to-reverse
+decision logged in docs/ARCHITECTURE.md with alternatives.
+
+Use design-code-architecture skill.
+```
+
+**Skills used:** design-code-architecture (orchestrates clean-architecture, domain-driven-design, system-design, ddia-systems, software-design-philosophy, release-it, pragmatic-programmer, 37signals-way)
+
+---
+
 ## Skill Index
 
 Quick reference showing where each skill appears in the examples above.
@@ -2214,3 +2446,15 @@ Quick reference showing where each skill appears in the examples above.
 | working-with-legacy-code | Software Engineers |
 | team-topologies | Tech Leads |
 | high-output-management | Tech Leads |
+| create-business | Guided Journeys |
+| create-website | Guided Journeys |
+| create-app | Guided Journeys |
+| improve-business | Guided Journeys |
+| improve-website | Guided Journeys |
+| improve-app | Guided Journeys |
+| grow-business | Guided Journeys |
+| grow-website | Guided Journeys |
+| grow-app | Guided Journeys |
+| improve-code-quality | Guided Journeys |
+| remove-technical-debt | Guided Journeys |
+| design-code-architecture | Guided Journeys |

@@ -20,6 +20,7 @@ Agent skills for Claude, Claude Code, Claude Cowork, Codex, Cursor, OpenClaw, He
 /plugin install team-motivation@wondelai-skills       # Drive (Autonomy, Mastery, Purpose)
 /plugin install code-craftsmanship@wondelai-skills    # Clean Code, Refactoring Patterns, Software Design Philosophy, Pragmatic Programmer, DDD
 /plugin install systems-architecture@wondelai-skills  # DDIA, System Design, Clean Architecture, Release It!, High Performance Browser Networking
+/plugin install metaskills@wondelai-skills            # 12 guided journeys: create/improve/grow a business, website, or app + code quality, tech debt, architecture
 ```
 
 ### Via skills.sh
@@ -81,6 +82,20 @@ npx skills add wondelai/skills/working-with-legacy-code --global
 npx skills add wondelai/skills/team-topologies --global
 npx skills add wondelai/skills/high-output-management --global
 npx skills add wondelai/skills/lean-analytics --global
+
+# Metaskills — guided journeys that orchestrate the skills above
+npx skills add wondelai/skills/create-business --global
+npx skills add wondelai/skills/create-website --global
+npx skills add wondelai/skills/create-app --global
+npx skills add wondelai/skills/improve-business --global
+npx skills add wondelai/skills/improve-website --global
+npx skills add wondelai/skills/improve-app --global
+npx skills add wondelai/skills/grow-business --global
+npx skills add wondelai/skills/grow-website --global
+npx skills add wondelai/skills/grow-app --global
+npx skills add wondelai/skills/improve-code-quality --global
+npx skills add wondelai/skills/remove-technical-debt --global
+npx skills add wondelai/skills/design-code-architecture --global
 ```
 
 ### Via OpenAI Codex
@@ -88,7 +103,7 @@ npx skills add wondelai/skills/lean-analytics --global
 Codex adopted the same open `SKILL.md` standard, so every skill here works in Codex CLI too:
 
 - **Individual skills** — the `npx skills add wondelai/skills/<name>` commands above target Codex as well (Codex is a supported [agentskills.io](https://agentskills.io) agent).
-- **As Codex plugins** — this repo ships a Codex plugin marketplace at [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json) with the same 9 collections. In a clone, Codex auto-discovers it (and the skills under `.agents/skills/`); manage installs from the `/plugins` menu in the Codex TUI. The Codex manifests are generated from `.claude-plugin/marketplace.json` (single source of truth) by `scripts/generate-codex-plugins.sh`.
+- **As Codex plugins** — this repo ships a Codex plugin marketplace at [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json) with the same 10 collections. In a clone, Codex auto-discovers it (and the skills under `.agents/skills/`); manage installs from the `/plugins` menu in the Codex TUI. The Codex manifests are generated from `.claude-plugin/marketplace.json` (single source of truth) by `scripts/generate-codex-plugins.sh`.
 
 ## Available Skills
 
@@ -144,8 +159,20 @@ Codex adopted the same open `SKILL.md` standard, so every skill here works in Co
 | [team-topologies](https://skills.wondel.ai/skills/team-topologies/) | Four team types, three interaction modes, Conway's law, team cognitive load | [Matthew Skelton](https://x.com/matthewpskelton) & [Manuel Pais](https://x.com/manupaisable)'s [*"Team Topologies"*](https://www.amazon.com/Team-Topologies-Organizing-Business-Technology/dp/1942788819?tag=wondelai00-20) |
 | [high-output-management](https://skills.wondel.ai/skills/high-output-management/) | Managerial leverage, one-on-ones, OKRs, task-relevant maturity | Andrew S. Grove's [*"High Output Management"*](https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884?tag=wondelai00-20) |
 | [lean-analytics](https://skills.wondel.ai/skills/lean-analytics/) | One Metric That Matters, metrics by business model and stage, benchmarks | [Alistair Croll](https://x.com/acroll) & [Ben Yoskovitz](https://x.com/byosko)'s [*"Lean Analytics"*](https://www.amazon.com/Lean-Analytics-Better-Startup-Faster/dp/1449335675?tag=wondelai00-20) |
+| [create-business](https://skills.wondel.ai/skills/create-business/) | Guided journey: raw idea → validated, positioned, priced business | Orchestrates 10 skills, from jobs-to-be-done to crossing-the-chasm |
+| [create-website](https://skills.wondel.ai/skills/create-website/) | Guided journey: blank page → high-converting website | Orchestrates 10 skills, from storybrand-messaging to steve-jobs-design-review |
+| [create-app](https://skills.wondel.ai/skills/create-app/) | Guided journey: idea → validated, well-architected app | Orchestrates 10 skills, from lean-startup to software-design-philosophy |
+| [improve-business](https://skills.wondel.ai/skills/improve-business/) | Guided journey: diagnose and fix a plateaued business | Orchestrates 8 skills, from good-strategy-bad-strategy to monetizing-innovation |
+| [improve-website](https://skills.wondel.ai/skills/improve-website/) | Guided journey: diagnose, fix, and prove website improvements | Orchestrates 8 skills, from cro-methodology to design-everyday-things |
+| [improve-app](https://skills.wondel.ai/skills/improve-app/) | Guided journey: incremental app improvement — code, reliability, UX | Orchestrates 11 skills, from clean-code to steve-jobs-design-review |
+| [grow-business](https://skills.wondel.ai/skills/grow-business/) | Guided journey: build a repeatable growth engine | Orchestrates 9 skills, from one-page-marketing to negotiation |
+| [grow-website](https://skills.wondel.ai/skills/grow-website/) | Guided journey: convert, capture, and compound website traffic | Orchestrates 8 skills, from cro-methodology to one-page-marketing |
+| [grow-app](https://skills.wondel.ai/skills/grow-app/) | Guided journey: retention-first app growth | Orchestrates 8 skills, from hooked-ux to drive-motivation |
+| [improve-code-quality](https://skills.wondel.ai/skills/improve-code-quality/) | Guided journey: vibe-coded prototype → production-ready code | Orchestrates 9 skills, from working-with-legacy-code to ddia-systems |
+| [remove-technical-debt](https://skills.wondel.ai/skills/remove-technical-debt/) | Guided journey: pay down debt in place without stopping shipping | Orchestrates 8 skills, from working-with-legacy-code to domain-driven-design |
+| [design-code-architecture](https://skills.wondel.ai/skills/design-code-architecture/) | Guided journey: deliberate architecture for a new system | Orchestrates 8 skills, from clean-architecture to 37signals-way |
 
-> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 80 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs).
+> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 92 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs) — including one for each guided journey.
 
 ---
 
@@ -1301,6 +1328,246 @@ Choose the One Metric That Matters for your business model and stage, kill vanit
 
 ---
 
+### [create-business](https://skills.wondel.ai/skills/create-business/)
+
+Guided journey from raw idea to a validated, positioned, priced business with a chosen beachhead. The agent drives every phase, asks you the decision questions, and records everything as living documents in your project's `docs/` folder so the journey resumes across sessions.
+
+**About the journey:** Orchestrates ten skills in a defended order — jobs-to-be-done, mom-test, design-sprint, lean-startup, good-strategy-bad-strategy, blue-ocean-strategy, obviously-awesome, hundred-million-offers, monetizing-innovation, crossing-the-chasm — writing CUSTOMER.md, EXPERIMENTS.md, STRATEGY.md, POSITIONING.md, OFFER.md, and PRODUCT.md as it goes.
+
+**Use when you need to:**
+- Turn a business idea into evidence before writing code
+- Validate demand with real customer conversations, not compliments
+- Build strategy, positioning, and an offer in the right order
+- Price against measured willingness to pay before launch
+- Pick a beachhead market you can actually dominate
+
+**Example prompts:**
+- *"I have an idea for a company — walk me through validating and launching it. Use create-business skill."*
+- *"Help me go from this SaaS idea to a positioned, priced offer step by step. Use create-business skill."*
+- *"Continue my business journey where we left off. Use create-business skill."*
+
+---
+
+### [create-website](https://skills.wondel.ai/skills/create-website/)
+
+Guided journey from blank page to a high-converting website: message first, then design, then conversion engineering, then a brutal final review. Every phase asks you the decision questions and lands its output in your project's `docs/` folder.
+
+**About the journey:** Orchestrates ten skills — one-page-marketing, storybrand-messaging, made-to-stick, top-design, web-typography, refactoring-ui, ux-heuristics, cro-methodology, scorecard-marketing, steve-jobs-design-review — writing MARKETING.md, POSITIONING.md, WEBSITE.md, and DESIGN.md as it goes.
+
+**Use when you need to:**
+- Build a new marketing site or landing page from scratch, in the right order
+- Get the message and one-liner locked before any design work
+- Create a design system, typography, and signature moments that convert
+- Engineer objection handling and lead capture into the site
+- Ship only after a cold, end-to-end design review
+
+**Example prompts:**
+- *"We need a website for our new product — take me through the whole build. Use create-website skill."*
+- *"Start the website journey: message first, then design, then conversion. Use create-website skill."*
+- *"Resume my website project from the tracker. Use create-website skill."*
+
+---
+
+### [create-app](https://skills.wondel.ai/skills/create-app/)
+
+Guided journey from idea to a validated, well-architected app: validate the riskiest assumption fast while making the expensive-to-reverse technical decisions deliberately. Interactive phase by phase, recorded in your project's `docs/` folder.
+
+**About the journey:** Orchestrates ten skills — lean-startup, design-sprint, clean-architecture, domain-driven-design, clean-code, pragmatic-programmer, system-design, ios-hig-design, 37signals-way, software-design-philosophy — writing PRODUCT.md, EXPERIMENTS.md, ARCHITECTURE.md, TESTING.md, and DESIGN.md as it goes.
+
+**Use when you need to:**
+- Start a new app without betting months on an unvalidated idea
+- Sequence validation, architecture, and domain modeling correctly
+- Keep the codebase clean and honestly sized from day one
+- Ship on an appetite-bounded cadence instead of an endless roadmap
+- Decide which scaling techniques you do NOT need yet
+
+**Example prompts:**
+- *"I want to build an app for [idea] — guide me from validation to architecture. Use create-app skill."*
+- *"Set up the create-app journey for this repo and run the intake. Use create-app skill."*
+- *"Pick up my app-building journey at the architecture phase. Use create-app skill."*
+
+---
+
+### [improve-business](https://skills.wondel.ai/skills/improve-business/)
+
+Guided journey for a plateaued or struggling business: diagnose the real challenge first, then fix execution rhythm, management leverage, team structure, motivation, metrics, margin, and pricing — in that order.
+
+**About the journey:** Orchestrates eight skills — good-strategy-bad-strategy, traction-eos, high-output-management, team-topologies, drive-motivation, lean-analytics, negotiation, monetizing-innovation — writing STRATEGY.md, OPERATIONS.md, and METRICS.md as it goes.
+
+**Use when you need to:**
+- Figure out why growth stalled before launching new initiatives
+- Replace a goals-as-strategy plan with a real strategy kernel
+- Install an execution rhythm (rocks, weekly meetings, ownership)
+- Stop leaking margin in renewals and vendor deals
+- Reprice around value instead of cost-plus guesswork
+
+**Example prompts:**
+- *"Our revenue has been flat for three quarters — diagnose and fix it with me. Use improve-business skill."*
+- *"Run the improve-business journey; start with the strategy diagnosis. Use improve-business skill."*
+- *"Continue our business turnaround from the tracker. Use improve-business skill."*
+
+---
+
+### [improve-website](https://skills.wondel.ai/skills/improve-website/)
+
+Guided journey to diagnose, fix, and prove website improvements: evidence from real visitors decides what changes, and every fix ships as a testable hypothesis with a pre-committed metric.
+
+**About the journey:** Orchestrates eight skills — cro-methodology, ux-heuristics, refactoring-ui, web-typography, storybrand-messaging, high-perf-browser, made-to-stick, design-everyday-things — extending WEBSITE.md, DESIGN.md, POSITIONING.md, EXPERIMENTS.md, and METRICS.md as it goes.
+
+**Use when you need to:**
+- Find out why visitors don't convert before redesigning anything
+- Remove usability friction with severity-ranked audits
+- Fix visual hierarchy, typography, and page speed systematically
+- Sharpen the message so a first-time visitor gets it in five seconds
+- Turn every change into an experiment you can prove or revert
+
+**Example prompts:**
+- *"Our landing page isn't converting — diagnose it and fix it phase by phase. Use improve-website skill."*
+- *"Audit and improve our site end to end, evidence first. Use improve-website skill."*
+- *"Resume the website improvement journey. Use improve-website skill."*
+
+---
+
+### [improve-app](https://skills.wondel.ai/skills/improve-app/)
+
+Guided journey to improve an existing app incrementally — never a rewrite: code quality, safe refactoring, production hardening, data-layer fixes, then UX polish and a brutal final review.
+
+**About the journey:** Orchestrates eleven skills — clean-code, refactoring-patterns, working-with-legacy-code, software-design-philosophy, release-it, ddia-systems, microinteractions, ux-heuristics, high-perf-browser, pragmatic-programmer, steve-jobs-design-review — extending TECH-DEBT.md, TESTING.md, ARCHITECTURE.md, RELIABILITY.md, DESIGN.md, PRODUCT.md, and METRICS.md as it goes.
+
+**Use when you need to:**
+- Raise an existing app's quality across code, reliability, and UX together
+- Refactor safely with tests pinning behavior first
+- Survive production: timeouts, circuit breakers, health checks
+- Polish microinteractions and remove usability friction
+- Close with a cold end-to-end review before relaunch
+
+**Example prompts:**
+- *"This app works but everything about it feels rough — improve it systematically. Use improve-app skill."*
+- *"Run the improve-app journey on this codebase, starting with a quality baseline. Use improve-app skill."*
+- *"Continue improving the app from where the tracker says we stopped. Use improve-app skill."*
+
+---
+
+### [grow-business](https://skills.wondel.ai/skills/grow-business/)
+
+Guided journey to build a repeatable growth engine: each phase produces an asset the next phase consumes — offer feeds pipeline, pipeline feeds word-of-mouth, and metrics keep it honest.
+
+**About the journey:** Orchestrates nine skills — one-page-marketing, hundred-million-offers, predictable-revenue, contagious, influence-psychology, crossing-the-chasm, cold-start-problem, lean-analytics, negotiation — writing MARKETING.md and extending OFFER.md, STRATEGY.md, METRICS.md, and CUSTOMER.md as it goes.
+
+**Use when you need to:**
+- Turn ad-hoc marketing into an operating system with owners
+- Build an offer strong enough to carry outbound and referrals
+- Manufacture pipeline with a repeatable outbound process
+- Engineer word-of-mouth and network effects deliberately
+- Stop discounting your way to growth
+
+**Example prompts:**
+- *"We have customers but growth is ad hoc — build us a growth engine. Use grow-business skill."*
+- *"Run the grow-business journey; our weakest square is lead generation. Use grow-business skill."*
+- *"Pick up our growth plan from the tracker. Use grow-business skill."*
+
+---
+
+### [grow-website](https://skills.wondel.ai/skills/grow-website/)
+
+Guided journey for growing a website: most traffic problems are conversion problems in costume, so capture and convert the visitors you have before buying more — then make them bring the next ones.
+
+**About the journey:** Orchestrates eight skills — cro-methodology, scorecard-marketing, storybrand-messaging, made-to-stick, influence-psychology, hundred-million-offers, contagious, one-page-marketing — extending MARKETING.md, POSITIONING.md, OFFER.md, WEBSITE.md, EXPERIMENTS.md, and METRICS.md as it goes.
+
+**Use when you need to:**
+- Grow leads and signups without a bigger ad budget
+- Capture the 97% of visitors who leave without converting
+- Sharpen the message and offer so the traffic you have converts
+- Make results shareable so visitors bring visitors
+- Tie the whole lifecycle together into one marketing plan
+
+**Example prompts:**
+- *"We get traffic but few leads — grow this site's output step by step. Use grow-website skill."*
+- *"Start the grow-website journey with a conversion diagnosis. Use grow-website skill."*
+- *"Resume the website growth journey. Use grow-website skill."*
+
+---
+
+### [grow-app](https://skills.wondel.ai/skills/grow-app/)
+
+Guided journey for retention-first app growth: fix the leaky bucket before pouring in acquisition — habit loops, activation, weekly discovery, and metrics before any growth spend.
+
+**About the journey:** Orchestrates eight skills — hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions, drive-motivation — writing METRICS.md and extending PRODUCT.md, EXPERIMENTS.md, DESIGN.md, CUSTOMER.md, and OFFER.md as it goes.
+
+**Use when you need to:**
+- Grow an app whose retention can't yet support acquisition
+- Design ethical habit loops and fix activation friction
+- Replace opinion-driven roadmaps with weekly discovery
+- Choose the One Metric That Matters for your stage
+- Sustain engagement with intrinsic motivation, not gimmicks
+
+**Example prompts:**
+- *"Users sign up and vanish — grow this app the retention-first way. Use grow-app skill."*
+- *"Run the grow-app journey; start with the habit-loop audit. Use grow-app skill."*
+- *"Continue our app growth journey from the tracker. Use grow-app skill."*
+
+---
+
+### [improve-code-quality](https://skills.wondel.ai/skills/improve-code-quality/)
+
+Guided journey from vibe-coded prototype to production-ready code: a week-old untested prototype is already legacy code, so build the safety net first, then raise readability, structure, and production hardening in order.
+
+**About the journey:** Orchestrates nine skills — working-with-legacy-code, clean-code, refactoring-patterns, software-design-philosophy, clean-architecture, pragmatic-programmer, release-it, system-design, ddia-systems — writing TESTING.md, TECH-DEBT.md, and RELIABILITY.md, and extending ARCHITECTURE.md as it goes.
+
+**Use when you need to:**
+- Take an AI-generated or hackathon prototype to production
+- Put untested code under characterization tests before touching it
+- Raise code quality without mixing refactors and behavior changes
+- Add timeouts, circuit breakers, and health checks before launch
+- Make honest scaling and data-layer decisions
+
+**Example prompts:**
+- *"I vibe-coded this app in a weekend — make it production-ready. Use improve-code-quality skill."*
+- *"Run the code-quality journey on this repo, safety net first. Use improve-code-quality skill."*
+- *"Resume hardening this codebase from the tracker. Use improve-code-quality skill."*
+
+---
+
+### [remove-technical-debt](https://skills.wondel.ai/skills/remove-technical-debt/)
+
+Guided journey for a codebase buried in technical debt: feedback over fear — cover and modify, never edit and pray, pay debt down in place on the paths you actually walk, and never stop shipping.
+
+**About the journey:** Orchestrates eight skills — working-with-legacy-code, refactoring-patterns, clean-code, software-design-philosophy, clean-architecture, pragmatic-programmer, release-it, domain-driven-design — writing TESTING.md and TECH-DEBT.md, and extending ARCHITECTURE.md and RELIABILITY.md as it goes.
+
+**Use when you need to:**
+- Tame a large, aged codebase the team is afraid to change
+- Build a characterization-test safety net before any refactoring
+- Work smells down with named, behavior-preserving refactorings
+- Draw dependency boundaries and carve bounded contexts without a rewrite
+- Keep a debt ledger with priorities instead of a vague "cleanup" wish
+
+**Example prompts:**
+- *"Our codebase is a minefield nobody dares touch — dig us out. Use remove-technical-debt skill."*
+- *"Start the tech-debt journey: pick the starting module and build the safety net. Use remove-technical-debt skill."*
+- *"Continue the debt paydown from the tracker. Use remove-technical-debt skill."*
+
+---
+
+### [design-code-architecture](https://skills.wondel.ai/skills/design-code-architecture/)
+
+Guided journey to design deliberate architecture for a new system: architecture is the set of decisions that are expensive to reverse — make exactly those, log why, and defer everything cheap.
+
+**About the journey:** Orchestrates eight skills — clean-architecture, domain-driven-design, system-design, ddia-systems, software-design-philosophy, release-it, pragmatic-programmer, 37signals-way — writing ARCHITECTURE.md and RELIABILITY.md, and extending TECH-DEBT.md and TESTING.md as it goes.
+
+**Use when you need to:**
+- Design a new system's structure before the first sprint locks it in
+- Draw boundaries and model the domain so the code speaks the business language
+- Size the system honestly and skip the scaling machinery you don't need
+- Make data, consistency, and failure-handling decisions explicitly
+- Cut speculative abstractions with an appetite-bounded review
+
+**Example prompts:**
+- *"We're starting a new service — design the architecture with me, decision by decision. Use design-code-architecture skill."*
+- *"Run the architecture journey for this system; default to a modular monolith. Use design-code-architecture skill."*
+- *"Resume the architecture design from the decision log. Use design-code-architecture skill."*
+
+---
+
 ## Learn More: The Skills Ecosystem
 
 Want to go deeper with skills — how they work, how to create your own, and what's available across the community?
@@ -1318,7 +1585,7 @@ Developer Toolkit is a comprehensive learning platform for mastering AI-assisted
 
 ## Work With Us
 
-These 50 skills are the open-source tip of what we do. **[Wondel.ai](https://skills.wondel.ai/work-with-us/)** builds custom Claude skills, agents, and MCP integrations — shipped to production, not demoed.
+These 62 skills are the open-source tip of what we do. **[Wondel.ai](https://skills.wondel.ai/work-with-us/)** builds custom Claude skills, agents, and MCP integrations — shipped to production, not demoed.
 
 - **Skill sprints** — a focused, eval-backed skill scoped and shipped fast
 - **Custom builds** — production AI systems combining skills, agents, and MCP integrations
@@ -1387,6 +1654,8 @@ The methodologies and frameworks referenced in these skills are the intellectual
 - **Team Topologies**: Matthew Skelton, Manuel Pais
 - **High Output Management**: Andrew S. Grove
 - **Lean Analytics**: Alistair Croll, Benjamin Yoskovitz
+
+The 12 metaskills (create/improve/grow × business/website/app, improve-code-quality, remove-technical-debt, design-code-architecture) are orchestration workflows authored by Wondel.ai. They sequence and invoke the skills above; the frameworks they reference remain the intellectual property of the authors listed here.
 
 These skills were created without directly copying or reproducing content from the original books or materials. They are based on:
 - Publicly available information about the methodologies
