@@ -164,7 +164,7 @@ Codex adopted the same open `SKILL.md` standard, so every skill here works in Co
 | [create-app](https://skills.wondel.ai/skills/create-app/) | Guided journey: idea → validated, well-architected app | Orchestrates 10 skills, from lean-startup to software-design-philosophy |
 | [improve-business](https://skills.wondel.ai/skills/improve-business/) | Guided journey: diagnose and fix a plateaued business | Orchestrates 8 skills, from good-strategy-bad-strategy to monetizing-innovation |
 | [improve-website](https://skills.wondel.ai/skills/improve-website/) | Guided journey: diagnose, fix, and prove website improvements | Orchestrates 8 skills, from cro-methodology to design-everyday-things |
-| [improve-app](https://skills.wondel.ai/skills/improve-app/) | Guided journey: incremental app improvement — code, reliability, UX | Orchestrates 11 skills, from clean-code to steve-jobs-design-review |
+| [improve-app](https://skills.wondel.ai/skills/improve-app/) | Guided journey: product, UX, copy, and in-app persuasion — fix what users feel | Orchestrates 9 skills, from jobs-to-be-done to steve-jobs-design-review |
 | [grow-business](https://skills.wondel.ai/skills/grow-business/) | Guided journey: build a repeatable growth engine | Orchestrates 9 skills, from one-page-marketing to negotiation |
 | [grow-website](https://skills.wondel.ai/skills/grow-website/) | Guided journey: convert, capture, and compound website traffic | Orchestrates 8 skills, from cro-methodology to one-page-marketing |
 | [grow-app](https://skills.wondel.ai/skills/grow-app/) | Guided journey: retention-first app growth | Orchestrates 8 skills, from hooked-ux to drive-motivation |
@@ -1430,20 +1430,20 @@ Guided journey to diagnose, fix, and prove website improvements: evidence from r
 
 ### [improve-app](https://skills.wondel.ai/skills/improve-app/)
 
-Guided journey to improve an existing app incrementally — never a rewrite: code quality, safe refactoring, production hardening, data-layer fixes, then UX polish and a brutal final review.
+Guided journey to improve an existing app where users feel it: product fit, UX friction, visual polish, interaction detail, in-app copy, ethical in-app persuasion, perceived speed — closed out with a brutal end-to-end review. Product and experience work, not code work.
 
-**About the journey:** Orchestrates eleven skills — clean-code, refactoring-patterns, working-with-legacy-code, software-design-philosophy, release-it, ddia-systems, microinteractions, ux-heuristics, high-perf-browser, pragmatic-programmer, steve-jobs-design-review — extending TECH-DEBT.md, TESTING.md, ARCHITECTURE.md, RELIABILITY.md, DESIGN.md, PRODUCT.md, and METRICS.md as it goes.
+**About the journey:** Orchestrates nine skills — jobs-to-be-done, ux-heuristics, design-everyday-things, refactoring-ui, microinteractions, made-to-stick, influence-psychology, high-perf-browser, steve-jobs-design-review — extending CUSTOMER.md, DESIGN.md, POSITIONING.md, PRODUCT.md, and EXPERIMENTS.md as it goes. For code quality, tests, or production hardening, use improve-code-quality or remove-technical-debt instead.
 
 **Use when you need to:**
-- Raise an existing app's quality across code, reliability, and UX together
-- Refactor safely with tests pinning behavior first
-- Survive production: timeouts, circuit breakers, health checks
-- Polish microinteractions and remove usability friction
-- Close with a cold end-to-end review before relaunch
+- Re-anchor the app on the job users actually hire it for
+- Remove usability friction with severity-ranked audits before any visual polish
+- Fix hierarchy, spacing, and microinteraction detail so screens feel professional
+- Rewrite in-app copy (onboarding, empty states, errors, CTAs) so it lands
+- Make paywalls and upgrade prompts persuade honestly, then face a cold final review
 
 **Example prompts:**
-- *"This app works but everything about it feels rough — improve it systematically. Use improve-app skill."*
-- *"Run the improve-app journey on this codebase, starting with a quality baseline. Use improve-app skill."*
+- *"The app works but feels rough and users say it's confusing — improve the experience end to end. Use improve-app skill."*
+- *"Run the improve-app journey; start by checking what job users hire us for. Use improve-app skill."*
 - *"Continue improving the app from where the tracker says we stopped. Use improve-app skill."*
 
 ---

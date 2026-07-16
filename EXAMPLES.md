@@ -2258,22 +2258,23 @@ Use improve-website skill.
 
 ---
 
-### Improve an App Without Rewriting It
+### Make an App Feel as Good as It Works
 
-> The app works, but the code is rough, production is shaky, and the UX has friction everywhere.
+> The app is functional, but users call it confusing, the screens feel rough, and upgrade prompts convert nobody.
 
 **Prompt:**
 
 ```
-Improve this app end to end — code quality, safe refactoring,
-production hardening, data layer, then UX polish and a final
-cold review. Work incrementally; no rewrites. Track debt and
-decisions in docs/.
+Our app works but the experience underwhelms: [paste symptoms —
+confusing flows, rough screens, ignored upgrade prompts]. Run the
+improve-app journey — product fit, UX audit, visual polish,
+microinteractions, in-app copy, and honest persuasion — ending
+with a brutal review. Track findings and fixes in docs/.
 
 Use improve-app skill.
 ```
 
-**Skills used:** improve-app (orchestrates clean-code, refactoring-patterns, working-with-legacy-code, software-design-philosophy, release-it, ddia-systems, microinteractions, ux-heuristics, high-perf-browser, pragmatic-programmer, steve-jobs-design-review)
+**Skills used:** improve-app (orchestrates jobs-to-be-done, ux-heuristics, design-everyday-things, refactoring-ui, microinteractions, made-to-stick, influence-psychology, high-perf-browser, steve-jobs-design-review)
 
 ---
 

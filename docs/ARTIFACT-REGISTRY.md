@@ -12,7 +12,7 @@ Rules every metaskill follows:
 
 ## docs/CUSTOMER.md
 
-Who we serve and the evidence. Creates: create-business, create-app. Extends: grow-business, grow-app, improve-business, create-website.
+Who we serve and the evidence. Creates: create-business, create-app. Extends: grow-business, grow-app, improve-business, improve-app, create-website.
 
 ```markdown
 # Customer
@@ -43,7 +43,7 @@ Decision (proceed / revise / stop) and reasoning.
 
 ## docs/POSITIONING.md
 
-How the market should understand us — positioning canvas and messaging in one file. Creates: create-business, create-website. Extends: grow-website, grow-business, improve-website.
+How the market should understand us — positioning canvas and messaging in one file. Creates: create-business, create-website. Extends: grow-website, grow-business, improve-website, improve-app.
 
 ```markdown
 # Positioning & Messaging
@@ -127,7 +127,7 @@ What we charge per, and why.
 
 ## docs/EXPERIMENTS.md
 
-Every test we run, with pre-committed criteria. Creates: create-business, create-app. Extends: improve-website, grow-website, grow-app, create-website.
+Every test we run, with pre-committed criteria. Creates: create-business, create-app. Extends: improve-website, grow-website, grow-app, create-website, improve-app.
 
 ```markdown
 # Experiments
@@ -178,7 +178,7 @@ Roles, sequences, qualification, handoff.
 
 ## docs/METRICS.md
 
-What we measure and current baselines. Creates: improve-business, grow-app. Extends: grow-business, grow-website, improve-website, improve-app.
+What we measure and current baselines. Creates: improve-business, grow-app. Extends: grow-business, grow-website, improve-website.
 
 ```markdown
 # Metrics
@@ -319,7 +319,7 @@ Spacing scale · color palette (shades, tinted grays) · shadows.
 
 ## docs/ARCHITECTURE.md
 
-System structure and decisions — includes domain model and data decisions (no separate DATA.md or DOMAIN.md). Creates: design-code-architecture, create-app. Extends: remove-technical-debt, improve-code-quality, improve-app.
+System structure and decisions — includes domain model and data decisions (no separate DATA.md or DOMAIN.md). Creates: design-code-architecture, create-app. Extends: remove-technical-debt, improve-code-quality.
 
 ```markdown
 # Architecture
@@ -349,7 +349,7 @@ Data models, storage engines, isolation levels, replication, system-of-record vs
 
 ## docs/TECH-DEBT.md
 
-The debt ledger — single queue for all code journeys. Creates: remove-technical-debt, improve-code-quality. Extends: improve-app, create-app, design-code-architecture (debt deliberately taken).
+The debt ledger — single queue for all code journeys. Creates: remove-technical-debt, improve-code-quality. Extends: create-app, design-code-architecture (debt deliberately taken).
 
 ```markdown
 # Technical Debt
@@ -373,7 +373,7 @@ Time per iteration; what gets fixed now vs boarded up with a ticket.
 
 ## docs/TESTING.md
 
-The safety net — what behavior is pinned, where the gaps are. Creates: remove-technical-debt, improve-code-quality, create-app. Extends: improve-app, design-code-architecture.
+The safety net — what behavior is pinned, where the gaps are. Creates: remove-technical-debt, improve-code-quality, create-app. Extends: design-code-architecture.
 
 ```markdown
 # Testing
@@ -393,7 +393,7 @@ Pyramid, tooling, what "green" gates.
 
 ## docs/RELIABILITY.md
 
-Production hardening status. Creates: improve-code-quality, design-code-architecture. Extends: remove-technical-debt, improve-app.
+Production hardening status. Creates: improve-code-quality, design-code-architecture. Extends: remove-technical-debt.
 
 ```markdown
 # Reliability
