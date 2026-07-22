@@ -1,6 +1,6 @@
 {
   "name": "metaskills",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "description": "Twelve guided journeys that orchestrate the whole skill library step by step — create, improve, and grow a business, website, or app, plus improve code quality, remove technical debt, and design code architecture. Each metaskill invokes the right skills phase by phase, asks the user questions at every decision point, and records results as living documents in the project docs/ folder",
   "license": "MIT",
   "keywords": [

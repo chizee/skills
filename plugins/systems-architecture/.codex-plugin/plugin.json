@@ -1,6 +1,6 @@
 {
   "name": "systems-architecture",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "description": "Systems architecture and distributed systems skills including Designing Data-Intensive Applications (Martin Kleppmann), System Design Interview (Alex Xu), Clean Architecture (Robert C. Martin), Release It! (Michael Nygard), High Performance Browser Networking (Ilya Grigorik), and Team Topologies (Skelton & Pais)",
   "license": "MIT",
   "keywords": [
