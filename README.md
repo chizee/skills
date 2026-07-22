@@ -1,4 +1,4 @@
-# Wondel.ai Skills
+# Wondel.ai Agent Skills — Business, Marketing, UX & Coding Frameworks from Bestselling Books
 
 62 agent skills for Claude, Claude Code, Claude Cowork, Codex, Cursor, OpenClaw, Hermes Agent and other agentskills.io-compatible agents: 50 expert frameworks from bestselling books, plus 12 **metaskills** — guided journeys that orchestrate them step by step to create, improve, or grow a business, website, or app, and to improve code quality, remove technical debt, or design code architecture. Each metaskill asks you the decision questions phase by phase and keeps its state in your project's `docs/` folder, so a journey survives across sessions. Browse all skills at [skills.wondel.ai](https://skills.wondel.ai/).
 
