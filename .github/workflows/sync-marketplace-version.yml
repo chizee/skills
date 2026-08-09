@@ -46,7 +46,7 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- .claude-plugin/marketplace.json plugins .agents/plugins; then
+          if [ -z "$(git status --porcelain -- .claude-plugin/marketplace.json plugins .agents/plugins)" ]; then
             echo "marketplace manifests already in sync — nothing to do"
             exit 0
           fi

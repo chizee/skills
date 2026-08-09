@@ -6,7 +6,7 @@
 # and creates symlinks in each IDE's skills directory:
 #   .claude/skills/  .cursor/skills/  .windsurf/skills/  .pi/skills/
 #
-# Run this after adding or removing a skill.
+# Run this after adding, removing, or editing a skill.
 
 set -euo pipefail
 
@@ -60,8 +60,8 @@ else
   echo "All ${#skills[@]} skills synced to ${#IDE_DIRS[@]} IDE directories."
 fi
 
-# Regenerate the Codex plugin marketplace too (skill set may have changed).
-if [[ -x "$REPO_ROOT/scripts/generate-codex-plugins.sh" ]]; then
+# Regenerate the plugin trees too (skill set or content may have changed).
+if [[ -x "$REPO_ROOT/scripts/generate-plugins.sh" ]]; then
   echo ""
-  "$REPO_ROOT/scripts/generate-codex-plugins.sh"
+  "$REPO_ROOT/scripts/generate-plugins.sh"
 fi

@@ -41,7 +41,7 @@ jq --arg v "$ver" '
 
 echo "Synced $MP -> version $ver (metadata.version + $(jq '.plugins | length' "$MP") plugin collections)"
 
-# Propagate the version to the generated Codex plugin marketplace.
-if [[ -x "$REPO_ROOT/scripts/generate-codex-plugins.sh" ]]; then
-  "$REPO_ROOT/scripts/generate-codex-plugins.sh"
+# Propagate the version to the generated plugin trees (Codex + Agent Plugins).
+if [[ -x "$REPO_ROOT/scripts/generate-plugins.sh" ]]; then
+  "$REPO_ROOT/scripts/generate-plugins.sh"
 fi

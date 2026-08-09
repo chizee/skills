@@ -1,6 +1,6 @@
 # Wondel.ai Agent Skills — Business, Marketing, UX & Coding Frameworks from Bestselling Books
 
-62 agent skills for Claude, Claude Code, Claude Cowork, Codex, Cursor, OpenClaw, Hermes Agent and other agentskills.io-compatible agents: 50 expert frameworks from bestselling books, plus 12 **metaskills** — guided journeys that orchestrate them step by step to create, improve, or grow a business, website, or app, and to improve code quality, remove technical debt, or design code architecture. Each metaskill asks you the decision questions phase by phase and keeps its state in your project's `docs/` folder, so a journey survives across sessions. Browse all skills at [skills.wondel.ai](https://skills.wondel.ai/).
+62 agent skills for Claude, Claude Code, Claude Cowork, Codex, Cursor, OpenClaw, Hermes Agent and other agentskills.io-compatible agents — also packaged as spec-conformant [Agent Plugins](https://agent-plugins.org/): 50 expert frameworks from bestselling books, plus 12 **metaskills** — guided journeys that orchestrate them step by step to create, improve, or grow a business, website, or app, and to improve code quality, remove technical debt, or design code architecture. Each metaskill asks you the decision questions phase by phase and keeps its state in your project's `docs/` folder, so a journey survives across sessions. Browse all skills at [skills.wondel.ai](https://skills.wondel.ai/).
 
 ## Installation
 
@@ -103,7 +103,15 @@ npx skills add wondelai/skills/design-code-architecture --global
 Codex adopted the same open `SKILL.md` standard, so every skill here works in Codex CLI too:
 
 - **Individual skills** — the `npx skills add wondelai/skills/<name>` commands above target Codex as well (Codex is a supported [agentskills.io](https://agentskills.io) agent).
-- **As Codex plugins** — this repo ships a Codex plugin marketplace at [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json) with the same 10 collections. In a clone, Codex auto-discovers it (and the skills under `.agents/skills/`); manage installs from the `/plugins` menu in the Codex TUI. The Codex manifests are generated from `.claude-plugin/marketplace.json` (single source of truth) by `scripts/generate-codex-plugins.sh`.
+- **As Codex plugins** — this repo ships a Codex plugin marketplace at [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json) with the same 10 collections. In a clone, Codex auto-discovers it (and the skills under `.agents/skills/`); manage installs from the `/plugins` menu in the Codex TUI. The Codex manifests are generated from `.claude-plugin/marketplace.json` (single source of truth) by `scripts/generate-plugins.sh`.
+
+### Via Agent Plugins (agent-plugins.org)
+
+The same collections also ship in the open [Agent Plugins](https://agent-plugins.org/) format (spec v1.0.0), so any conforming client can install them:
+
+- **Collection plugins** — each `plugins/<collection>/` directory is a self-contained Agent Plugin: a root `plugin.json` manifest plus real copies of its skills under `skills/` — the same 10 collections as the Claude marketplace.
+- **All-in-one bundle** — [`plugins/wondelai-skills/`](plugins/wondelai-skills/) is a single Agent Plugin containing all 62 skills.
+- **Installing** — the spec defines the package format; installation is client-specific. Clone this repo and point your client at a plugin directory (e.g. `plugins/marketing-cro` or `plugins/wondelai-skills`). The manifests are generated from [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (single source of truth) by `scripts/generate-plugins.sh`.
 
 ## Available Skills
 
