@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wondelai-skills",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Wondel.ai Agent Skills — Business, Marketing, UX & Coding Frameworks from Bestselling Books. 62 skills for product strategy, UX design, marketing, sales, motivation, conversion optimization, code quality, and systems architecture, plus 12 guided-journey metaskills that orchestrate them step by step",
   "author": {
     "name": "Wondel.ai",
