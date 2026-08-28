@@ -2391,6 +2391,47 @@ Use design-code-architecture skill.
 
 ---
 
+### Fix the One Flow That Leaks the Most Money
+
+> Traffic is fine and the product is fine, but people start the checkout and never finish it.
+
+**Prompt:**
+
+```
+Our [signup/checkout/onboarding] flow leaks: [paste the funnel
+numbers or symptoms]. Run the conversion-optimization journey —
+find the leak with numbers first, research why people drop in
+their own words, then fix message, offer, proof, and friction.
+Every change ships as a test with a pre-committed metric.
+
+Use conversion-optimization skill.
+```
+
+**Skills used:** conversion-optimization (orchestrates lean-analytics, cro-methodology, storybrand-messaging, hundred-million-offers, influence-psychology, design-everyday-things)
+
+---
+
+### Make a Working App Measurably Faster
+
+> It shipped, it earns, and it has gotten slow — but nobody knows which part is actually slow.
+
+**Prompt:**
+
+```
+Our [stack] app has gotten slow: [paste p95s, slow endpoints, or
+the complaint]. Run the architecture-optimization journey —
+baseline and pin behavior first, then boundaries, hot-path
+refactors, the measured bottleneck, and the query layer. Keep a
+before/after ledger in docs/PERFORMANCE.md and revert anything
+that doesn't beat its baseline.
+
+Use architecture-optimization skill.
+```
+
+**Skills used:** architecture-optimization (orchestrates working-with-legacy-code, clean-architecture, software-design-philosophy, refactoring-patterns, system-design, ddia-systems, release-it, pragmatic-programmer)
+
+---
+
 ## Skill Index
 
 Quick reference showing where each skill appears in the examples above.
@@ -2459,3 +2500,5 @@ Quick reference showing where each skill appears in the examples above.
 | improve-code-quality | Guided Journeys |
 | remove-technical-debt | Guided Journeys |
 | design-code-architecture | Guided Journeys |
+| conversion-optimization | Guided Journeys |
+| architecture-optimization | Guided Journeys |
