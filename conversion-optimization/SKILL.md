@@ -30,11 +30,11 @@ rather than improvising their frameworks.
 |---|---|---|---|
 | 1 | lean-analytics | Where does the flow actually leak, and what is the one metric? | Extends docs/METRICS.md — GATE |
 | 2 | cro-methodology | Why do people drop at the leak — which objections and friction? | Creates docs/FUNNEL.md; extends docs/EXPERIMENTS.md — GATE |
-| 3 | storybrand-messaging | Does the leaking step promise the visitor's own desired outcome in five seconds? | Extends docs/POSITIONING.md + docs/FUNNEL.md |
-| 4 | hundred-million-offers | Is the offer at the conversion point worth acting on now? | Extends docs/OFFER.md |
-| 5 | influence-psychology | Is there honest proof at every point of doubt? | Extends docs/FUNNEL.md |
-| 6 | design-everyday-things | Can a visitor who decided to act complete the flow without stumbling? | Extends docs/FUNNEL.md + docs/DESIGN.md |
-| 7 | cro-methodology | Will we know the fix worked — pre-committed metric, sample size, no peeking? | Extends docs/EXPERIMENTS.md |
+| 3 | storybrand-messaging | Does the leaking step promise the visitor's own desired outcome in five seconds? | Extends docs/POSITIONING.md + docs/FUNNEL.md + docs/EXPERIMENTS.md |
+| 4 | hundred-million-offers | Is the offer at the conversion point worth acting on now? | Extends docs/OFFER.md + docs/EXPERIMENTS.md |
+| 5 | influence-psychology | Is there honest proof at every point of doubt? | Extends docs/FUNNEL.md + docs/EXPERIMENTS.md |
+| 6 | design-everyday-things | Can a visitor who decided to act complete the flow without stumbling? | Extends docs/FUNNEL.md + docs/DESIGN.md + docs/EXPERIMENTS.md |
+| 7 | cro-methodology | Will we know the fix worked — pre-committed metric, sample size, no peeking? | Extends docs/EXPERIMENTS.md + docs/METRICS.md |
 
 ## Operating Rules
 
@@ -54,7 +54,7 @@ Ask these before creating the tracker:
 1. **Which flow are we optimizing, and what is the ONE action at its end?** (Scopes every phase — a flow with three competing CTAs has no goal.)
 2. **Where do the numbers say people drop** — analytics, funnel steps, cohort data? Paste what you have. (Feeds the Phase 1 leak diagnosis; no instrumentation means Phase 1 starts by adding it.)
 3. **Roughly how much traffic or volume enters the flow per week?** (Gates Phase 7 — decides whether A/B tests can reach significance or the journey leans on qualitative evidence and before/after windows.)
-4. **What voice-of-customer sources exist or can be gotten** — exit surveys, session recordings, support tickets, sales calls, reviews? (Phase 2 objections must use the customer's own words.)
+4. **What voice-of-customer sources exist or can be gotten** — exit surveys, session recordings, support tickets, sales calls, reviews — and can you paste or export the raw text of the best one? (Phase 2 objections must quote the customer's own words, so the phase needs the content, not just the source name.)
 5. **What is the current offer at the conversion point** — price, guarantee, bonuses — and can it change? (Gates Phase 4; a contractually fixed offer narrows it to presentation.)
 6. **Do docs/POSITIONING.md or docs/OFFER.md already exist from another journey?** (Phases 3-4 build on them rather than restarting.)
 7. **How much of the journey do you want now?** (Phases 1-2 are the mandatory diagnosis; 3-6 are the fix passes aimed by it; 7 turns fixes into proof.)
@@ -85,7 +85,7 @@ and segment (channel, device, plan) — one collapsing segment hides inside a fl
 
 **Artifact:** Extend docs/METRICS.md `## Funnel` (stage | conversion | benchmark | bottleneck?), `## Stage & One Metric That Matters`, and `## Baselines & Targets`. Update the tracker.
 
-**Done when:** every step has a measured baseline, the OMTM and counter-metric are recorded with a line in the sand, and the leak is named — only then are Phases 2-7 unlocked.
+**Done when:** the funnel is measured at the coarsest granularity that still localizes the leak to a single step, the OMTM and counter-metric are recorded with a line in the sand, and the leak is named — only then are Phases 2-7 unlocked. Finer sub-steps awaiting instrumentation stay `awaiting-evidence` in Next Actions and do not block the journey, provided the named leak does not depend on them.
 
 ### Phase 2 — Research why they leave (cro-methodology) — GATE
 
@@ -105,7 +105,7 @@ if a change couldn't plausibly double the step, don't queue it.
 
 **Decide with the user:** (1) Which researched objection is the primary leak driver. (2) Low traffic: accept qualitative plus heuristic evidence — explicitly. (3) Which implicit objections need CO-Only counters (countered without being stated).
 
-**Artifact:** Create docs/FUNNEL.md with `## Flow Map & ONE Action`, `## Leak Diagnosis`, and `## Objections & Counters (O/CO)`; extend docs/EXPERIMENTS.md `## Experiment Backlog` (ICE-ranked). Update the tracker.
+**Artifact:** Create docs/FUNNEL.md with `## Flow Map & ONE Action`, `## Leak Diagnosis`, and `## Objections & Counters (O/CO)`; extend docs/EXPERIMENTS.md `## Experiment Backlog` (ICE-ranked). METRICS.md `## Funnel` stays canonical for the conversion numbers — Leak Diagnosis cites them and adds the researched reason and severity. Update the tracker.
 
 **Done when:** the flow map names the ONE action per step, every researched objection has an evidence-backed counter and a placement, and the backlog is ICE-ranked.
 
@@ -126,7 +126,7 @@ still remember tomorrow.
 
 **Decide with the user:** Which rewrite passes the 5-second test (a stranger can say what's offered and why it matters); which internal problem the copy names; whether the step keeps a transitional CTA or goes single-CTA.
 
-**Artifact:** Extend docs/POSITIONING.md `## One-Liner` and `## Key Messages` (surface | message | status); record the step rewrite in docs/FUNNEL.md `## Flow Map & ONE Action`; append copy tests to docs/EXPERIMENTS.md `## Experiment Backlog`. Update the tracker.
+**Artifact:** Extend docs/POSITIONING.md `## Brand Script (StoryBrand)`, `## One-Liner`, and `## Key Messages` (surface | message | status); record the rewrite in the `Proposed message/CTA` column of docs/FUNNEL.md `## Flow Map & ONE Action`, leaving `Current message/CTA` intact as the before-state Phase 7 measures against; append copy tests to docs/EXPERIMENTS.md `## Experiment Backlog`. Update the tracker.
 
 **Done when:** the leaking step has a rewritten message that names the internal problem, one primary CTA, and a logged test hypothesis.
 
@@ -145,7 +145,7 @@ stack. Scarcity and urgency only when real — fake deadlines convert once and c
 
 **Decide with the user:** Which guarantee the business can actually honor; which bonuses are real and sustainable; whether price presentation changes (anchoring, payment plans) — pricing itself may be out of scope; record that.
 
-**Artifact:** Extend docs/OFFER.md `## Offer Stack` (element | description | honest value | objection it kills), plus `## Willingness-to-Pay Evidence` if new evidence surfaced; append offer tests to docs/EXPERIMENTS.md `## Experiment Backlog`. Update the tracker.
+**Artifact:** Extend docs/OFFER.md `## Offer Stack` (element | description | honest value | objection it kills), `## Price Metric` when the flow raises what the price is charged per, plus `## Willingness-to-Pay Evidence` if new evidence surfaced; append offer tests to docs/EXPERIMENTS.md `## Experiment Backlog`. Update the tracker.
 
 **Done when:** each Value Equation lever has a concrete change or a reason it stays, the guarantee targets the top researched objection, and every offer change carries a test hypothesis.
 
@@ -186,11 +186,11 @@ dialogs.
 
 **Invoke:** Use the `design-everyday-things` skill with the conversion-critical steps (form, payment, confirmation). Ask for weak signifiers, where constraints replace error messages, feedback gaps, field-by-field form cuts, and message rewrites.
 
-**Decide with the user:** Which fields are truly required now versus collectable later; where a constraint replaces a warning; whether the flow shows total cost earlier; which severity-4 friction items ship immediately versus get tested.
+**Decide with the user:** Which fields are truly required now versus collectable later; where a constraint replaces a warning; whether the flow shows total cost earlier; which severity-4 friction items ship immediately as a logged before/after card versus wait for a full test.
 
-**Artifact:** Extend docs/FUNNEL.md `## Flow Friction Audit` (step | issue | severity 0-4 | fix | status); extend docs/DESIGN.md `## UX Audit Findings` for reusable component fixes; append fixes to docs/EXPERIMENTS.md `## Experiment Backlog`. Update the tracker.
+**Artifact:** Extend docs/FUNNEL.md `## Flow Friction Audit` (step | issue | severity 0-4 | fix | status); extend docs/DESIGN.md `## UX Audit Findings` for reusable component fixes, naming the Norman gulf (execution or evaluation) in the `Heuristic` column; append fixes to docs/EXPERIMENTS.md `## Experiment Backlog`. Update the tracker.
 
-**Done when:** every step has a friction audit row, forms are cut to minimum fields with all costs visible before the final step, severity-4 items have owners, and error messages meet the checklist.
+**Done when:** every step has a friction audit row, forms are cut to minimum fields, severity-4 items have owners, and error messages meet the checklist. Where money changes hands in this flow, all costs are visible before the final step and guest checkout is offered; in a flow that takes no payment, mark those two rows `n/a`.
 
 ### Phase 7 — Prove it (cro-methodology)
 
@@ -210,7 +210,7 @@ the new control; losers become learnings written down.
 
 **Decide with the user:** Which 1-3 hypotheses run first (highest ICE on the money path); the guardrail metrics; what happens on a flat result — iterate the fix, or return to Phase 2 for better research.
 
-**Artifact:** Promote backlog rows to docs/EXPERIMENTS.md `## Experiment Cards` with the full pre-committed card; record results and verdicts as they land; extend docs/METRICS.md `## Baselines & Targets` with post-test baselines. Update the tracker.
+**Artifact:** Promote backlog rows to docs/EXPERIMENTS.md `## Experiment Cards`, adding the pre-committed sample size per arm, planned duration, and the minimum lift worth keeping as extra bullets on the card (the skeleton's bullets carry hypothesis, metrics, and decision rule; extra bullets are additive and allowed); record results and verdicts as they land; extend docs/METRICS.md `## Baselines & Targets` with a new dated row per tested metric, leaving the pre-test baseline row intact. Update the tracker.
 
 **Done when:** each shipped fix is a card with a pre-committed metric, sample size, and decision rule; results carry verdicts; and the OMTM's new baseline is written down.
 
@@ -223,7 +223,7 @@ the new control; losers become learnings written down.
 | scorecard-marketing | the flow needs a lower-commitment entry — a quiz or assessment as the transitional conversion | Extends docs/WEBSITE.md `## Lead Capture` |
 | hooked-ux | the conversion sticks but the next visit doesn't — post-conversion activation is the real leak | Extends docs/PRODUCT.md `## Hook Model` |
 
-Optional phases follow the same operating rules — load and use each listed skill exactly as a core phase would; insert where the Add-when condition first becomes true.
+Optional phases follow the same operating rules — load and use each listed skill exactly as a core phase would; insert where the Add-when condition first becomes true. They carry no inline Brief: standalone, run ux-heuristics as a severity-rated pass over Nielsen's 10 heuristics, microinteractions as a trigger/rules/feedback/loops inventory, scorecard-marketing as a quiz-funnel design ending in a personalized result, and hooked-ux as a trigger → action → variable reward → investment loop audit — or install the named skill for its full framework.
 
 ## Common Mistakes
 

@@ -1,6 +1,6 @@
 # architecture-optimization artifact templates
 
-Skeletons this metaskill creates in the user's docs/ folder. Extend-only artifacts (TESTING.md, ARCHITECTURE.md, TECH-DEBT.md) are governed by the section headings named in each phase — read the file before writing, add or update your sections, and preserve everyone else's. The skeletons below are the files this journey most often creates from scratch; copy them verbatim only when the file is missing.
+Skeletons for every docs/ file this journey writes. Read the file before writing: if it is missing, create it from the full skeleton below (all section headings), then fill only the sections your phase names; if it exists, extend it — add or update your sections and preserve everyone else's. A journey that starts in a project with no `docs/` folder creates several of these from scratch, which is the normal case for this skill.
 
 ## Tracker: docs/ARCHITECTURE-OPTIMIZATION-PLAN.md
 
@@ -10,20 +10,24 @@ Created on the first run (Intake). Never shared with another journey.
 # Architecture Optimization Plan
 
 ## Context
-Intake answers, date started, hot paths in scope, tool of record for measurements.
+Intake answers, date started, hot paths in scope.
+Mode: skills-installed | fallback (Briefs + references/methods.md) — set at the first phase, so a
+resumed session knows whether earlier artifacts are skill-grade or Brief-grade.
 
 ## Phase Status
 | Phase | Skill | Status | Artifact | Date |
 |---|---|---|---|---|
-| 1 | working-with-legacy-code | pending | TESTING.md, PERFORMANCE.md | |
+| 1 | working-with-legacy-code | pending | TESTING.md, TECH-DEBT.md, PERFORMANCE.md | |
 | 2 | clean-architecture | pending | ARCHITECTURE.md | |
 | 3 | software-design-philosophy | pending | TECH-DEBT.md | |
-| 4 | refactoring-patterns | pending | TECH-DEBT.md | |
+| 4 | refactoring-patterns | pending | TECH-DEBT.md, TESTING.md | |
 | 5 | system-design | pending | PERFORMANCE.md, ARCHITECTURE.md | |
 | 6 | ddia-systems | pending | ARCHITECTURE.md, PERFORMANCE.md | |
 | 7 | release-it | pending | RELIABILITY.md | |
 | 8 | pragmatic-programmer | pending | PERFORMANCE.md, TECH-DEBT.md, TESTING.md | |
 Statuses: pending · in-progress · awaiting-evidence · done · deferred: <reason> · skipped: <reason>
+A phase parked at `awaiting-evidence` carries a Next Actions row naming the evidence owed, its owner,
+and the date — otherwise the next session cannot tell what it is waiting for.
 
 ## Key Decisions
 | Date | Phase | Decision | Rationale |
@@ -45,7 +49,8 @@ Measured performance state — baselines, budgets, findings, and the before/afte
 |---|---|---|---|
 
 ## Load Reality
-Measured QPS average/peak, data volumes, growth rate.
+Measured QPS average/peak, data volumes, growth rate. This is the single source for load numbers —
+ARCHITECTURE.md `## System Context` cites it rather than repeating them.
 
 ## Profile Findings
 | Hotspot | Evidence (profiler/APM) | Suspected cause | Fix | Status |
@@ -56,9 +61,83 @@ Measured QPS average/peak, data volumes, growth rate.
 |---|---|---|---|---|
 ```
 
+## docs/TESTING.md
+
+The safety net — what behavior is pinned, where the gaps are.
+
+```markdown
+# Testing
+
+## Test Strategy
+Pyramid, tooling, what "green" gates.
+
+## Safety Net Map
+| Module | Pinned behaviors | Test files | Gaps |
+|---|---|---|---|
+
+## Characterization Backlog
+- [ ] module (risk, priority)
+
+## CI Gates
+```
+
+## docs/TECH-DEBT.md
+
+The debt ledger — single queue for all code journeys.
+
+```markdown
+# Technical Debt
+
+## Debt Ledger
+| Item | Location | Type | Risk | Effort | Priority | Status |
+|---|---|---|---|---|---|---|
+
+## Smell Inventory
+| Smell | Location | Refactoring | Status |
+|---|---|---|---|
+
+## Sprout / Wrap Register
+Code added beside legacy (to fold back in later).
+
+## Debt Budget & Broken-Windows Policy
+Time per iteration; what gets fixed now vs boarded up with a ticket.
+
+## Adopted Conventions
+```
+
+## docs/ARCHITECTURE.md
+
+System structure and decisions — includes domain model and data decisions (no separate DATA.md or DOMAIN.md).
+
+```markdown
+# Architecture
+
+## System Context
+What the system does, key integrations, load reality (cite PERFORMANCE.md `## Load Reality`).
+
+## Layer Map & Dependency Rule
+Layers, what depends on what, current violations.
+| Violation | Location | Fix | Status |
+|---|---|---|---|
+
+## Bounded Contexts & Context Map
+Contexts, relationships, anti-corruption layers.
+
+## Domain Glossary (Ubiquitous Language)
+| Term | Meaning | Code name |
+|---|---|---|
+
+## Data & Storage Decisions
+Data models, storage engines, isolation levels, replication, system-of-record vs derived data.
+
+## Decision Log
+| Date | Decision | Why | Alternatives rejected |
+|---|---|---|---|
+```
+
 ## docs/RELIABILITY.md
 
-Production hardening status — created here only when no prior journey has (otherwise extend).
+Production hardening status.
 
 ```markdown
 # Reliability

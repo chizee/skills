@@ -29,10 +29,10 @@ rather than improvising their frameworks.
 
 | Phase | Skill | Question it answers | Artifact |
 |---|---|---|---|
-| 1 | working-with-legacy-code | Is behavior pinned and performance measured, so every change is provable? | Extends docs/TESTING.md; creates docs/PERFORMANCE.md — GATE |
+| 1 | working-with-legacy-code | Is behavior pinned and performance measured, so every change is provable? | Creates docs/PERFORMANCE.md + docs/TECH-DEBT.md; extends docs/TESTING.md — GATE |
 | 2 | clean-architecture | Do dependencies still point inward, or has the boundary drifted as the code grew? | Extends docs/ARCHITECTURE.md |
 | 3 | software-design-philosophy | Are modules deep, or has the structure itself become the complexity? | Extends docs/TECH-DEBT.md |
-| 4 | refactoring-patterns | Can we reshape the hot paths in named, behavior-preserving steps? | Extends docs/TECH-DEBT.md |
+| 4 | refactoring-patterns | Can we reshape the hot paths in named, behavior-preserving steps? | Extends docs/TECH-DEBT.md + docs/TESTING.md |
 | 5 | system-design | What does the measured load say the bottleneck is, and what is the cheapest fix? | Extends docs/PERFORMANCE.md + docs/ARCHITECTURE.md |
 | 6 | ddia-systems | Is the data layer the bottleneck — queries, indexes, isolation, derived data? | Extends docs/ARCHITECTURE.md + docs/PERFORMANCE.md |
 | 7 | release-it | Does it stay fast and stable when a dependency is slow or down? | Creates-or-extends docs/RELIABILITY.md |
@@ -47,7 +47,7 @@ rather than improvising their frameworks.
 5. **In-phase decisions.** Ask every question under "Decide with the user" — with concrete options and your recommendation. Record the choice in the tracker's Key Decisions. A decision made silently is a defect.
 6. **Phase exit.** Present the draft artifact content for sign-off before writing. On approval: write or extend the docs/ files, update the tracker (status, Key Decisions, Next Actions). Done when the files are written and the phase row shows `done`.
 7. **Artifact discipline.** Read before writing; create a file only if missing, otherwise extend — add or update your sections, preserve everyone else's. Files are UPPERCASE in `docs/`. Every recommendation lands as a checkbox or a table row with owner and priority. See [references/artifact-templates.md](references/artifact-templates.md) when creating a docs/ file for the first time — create it from the full skeleton (all section headings), then fill the sections your phase names.
-8. **Never optimize unmeasured, never restructure unpinned.** Every performance change cites a Phase 1 baseline and lands in the PERFORMANCE.md Optimization Ledger with measured before/after — a change that doesn't move its number gets reverted, not kept. Structural changes touch only code pinned in the Safety Net Map, preserve behavior, and land in structure-only commits separate from behavior and optimization commits.
+8. **Never optimize unmeasured, never restructure unpinned.** Every change made to reduce a measured baseline cites that baseline and lands in the PERFORMANCE.md Optimization Ledger with before/after — one that doesn't move its number gets reverted, not kept. (Resilience and gating work — timeouts, breakers, bulkheads, pagination, CI gates — is judged by the Done-when of its own phase, not by a latency delta.) Structural changes touch only code pinned in the Safety Net Map, preserve behavior, and land in structure-only commits separate from behavior and optimization commits.
 
 ## Intake
 
@@ -61,13 +61,13 @@ Ask these before creating the tracker:
 6. **What are the real load numbers** — QPS average and peak, data volumes, growth rate? (Gates Phase 5 — sizing by numbers, not fear.)
 7. **How much of the journey do you want now?** (Phases 1-4 make it safe and clean to change; 5-6 make it fast; 7-8 keep it that way.)
 
-Skip heuristics: compress Phases 2-3 to an audit-only pass when the structure is sound and the pain is purely performance — record what the audit found either way; skip Phase 7 only when a prior journey's RELIABILITY.md Integration-Point Audit is verifiably current (check the file, don't assume). Never skip Phase 1 — an optimization without a baseline is a guess, and a restructure without a net is a gamble.
+Skip heuristics: compress Phases 2-3 to an audit-only pass when the structure is sound and the pain is purely performance — record what the audit found either way and status the phase `done` with an "audit only, no changes" note; skip Phase 7 only when a prior journey's RELIABILITY.md Integration-Point Audit is verifiably current (check the file, don't assume). Never skip Phase 1 — an optimization without a baseline is a guess, and a restructure without a net is a gamble.
 
 Then create `docs/ARCHITECTURE-OPTIMIZATION-PLAN.md` from the template and confirm the plan. Done when the tracker exists with every phase statused and the user has confirmed the plan.
 
 ## Phases
 
-Phases run in the listed order — each assumes the previous phase's artifact exists. Structure before speed is deliberate: Phases 2-4 make the hot paths safe and cheap to change, which is what makes the Phase 5-6 optimizations small diffs instead of surgery. Any phase can be entered, skipped, or deferred per the Operating Rules, but Phase 1 gates them all. When running any phase from its Brief (constituent skill not installed), read [references/methods.md](references/methods.md) first — it carries each phase's full method, checklists, formulas, and heuristics; the Brief is only the summary.
+Phases run in the listed order — each assumes the previous phase's artifact exists. Structure before speed is deliberate: Phases 2-4 make the hot paths safe and cheap to change, which is what makes the Phase 5-6 optimizations small diffs instead of surgery. Any phase can be entered, skipped, or deferred per the Operating Rules, but Phase 1 gates them all — as two independent nets: pinned behavior unlocks Phases 2-4, and a recorded baseline unlocks Phases 5-6, so structure work need not wait on a profile that takes weeks to gather. Phases 5 and 6 may be swapped when the Phase 1 profile shows the database dominating: fixing an N+1 or a missing index before adding a cache is the skill's own cheapest-first law. When running any phase from its Brief (constituent skill not installed), read [references/methods.md](references/methods.md) first — it carries each phase's full method, checklists, formulas, and heuristics; the Brief is only the summary.
 
 ### Phase 1 — Pin it and measure it (working-with-legacy-code) — GATE
 
@@ -87,9 +87,9 @@ Set the budget each metric must meet, so "done" is a number, not a feeling.
 
 **Decide with the user:** (1) Confirm the hot paths in scope — measured pain, not suspicion. (2) The budget per metric (e.g. checkout p95 < 500ms) and the tool of record (profiler, APM, load test) so before/after numbers stay comparable. (3) Bugs found while characterizing: pin the current behavior and ledger them, never silently fix — callers may depend on the quirk.
 
-**Artifact:** Extend docs/TESTING.md `## Safety Net Map` and `## Characterization Backlog`; create docs/PERFORMANCE.md with `## Baselines & Budgets`, `## Load Reality`, `## Profile Findings`, and `## Optimization Ledger`. Update the tracker.
+**Artifact:** Extend docs/TESTING.md `## Safety Net Map` and `## Characterization Backlog`; create docs/PERFORMANCE.md with `## Baselines & Budgets`, `## Load Reality`, `## Profile Findings`, and `## Optimization Ledger`; create-or-extend docs/TECH-DEBT.md `## Debt Ledger` and `## Sprout / Wrap Register` for bugs pinned as-is and untested hosts. Update the tracker.
 
-**Done when:** every in-scope flow has pinned behavior (suite green) and a recorded baseline with a budget — only then are Phases 2-8 unlocked.
+**Done when:** every in-scope flow has pinned behavior (suite green) — which unlocks Phases 2-4 — and a recorded baseline with a budget, which unlocks Phases 5-6. Record the two separately; a profile still being gathered parks at `awaiting-evidence` with a Next Actions row rather than blocking the structure phases.
 
 ### Phase 2 — Re-draw the drifted boundaries (clean-architecture)
 
@@ -130,7 +130,7 @@ also collapses call-chain ceremony on hot paths — but readability, not nanosec
 
 **Artifact:** Extend docs/TECH-DEBT.md `## Smell Inventory` (shallow-module and information-leakage entries with the consolidation applied) and `## Adopted Conventions`. Update the tracker.
 
-**Done when:** each shallow-module cluster is consolidated or ledgered with a fix, no design decision lives in two modules, and the suite is green.
+**Done when:** each shallow-module cluster is consolidated or ledgered with a fix, every identified leaked decision is consolidated or a Smell Inventory row, and the suite is green.
 
 ### Phase 4 — Refactor the hot paths (refactoring-patterns)
 
@@ -149,7 +149,7 @@ separate commits.
 
 **Decide with the user:** Scope — which smells this pass versus ledgered; which upcoming optimization warrants a Preparatory Refactoring at its insertion point first; whether the refactored modules join the CI gate list in TESTING.md.
 
-**Artifact:** Extend docs/TECH-DEBT.md `## Smell Inventory` (smell | location | refactoring | status). Update the tracker.
+**Artifact:** Extend docs/TECH-DEBT.md `## Smell Inventory` (smell | location | refactoring | status); extend docs/TESTING.md `## CI Gates` with any module promoted to the gate list. Update the tracker.
 
 **Done when:** targeted smells show a named refactoring and `done` / `ticketed` status, tests are green, and structural commits contain no behavior changes.
 
@@ -171,7 +171,7 @@ only with evidence. Re-measure after every change; keep what moves the number, r
 
 **Decide with the user:** Which moves ship now versus defer with the trigger number written down; the first workload, if any, to move behind a queue; the invalidation rule for each cached path — what event invalidates which key.
 
-**Artifact:** Extend docs/PERFORMANCE.md `## Profile Findings` and `## Optimization Ledger` (change | before | after | verdict | date); extend docs/ARCHITECTURE.md `## System Context` (load numbers) and `## Decision Log` (each adopt/defer with its trigger). Update the tracker.
+**Artifact:** Extend docs/PERFORMANCE.md `## Profile Findings` and `## Optimization Ledger` (change | before | after | verdict | date); extend docs/ARCHITECTURE.md `## Decision Log` (each adopt/defer with its trigger) and `## System Context`, which cites PERFORMANCE.md `## Load Reality` rather than repeating the numbers. Update the tracker.
 
 **Done when:** the bottleneck is named from the profile, each move is applied with before/after in the ledger or deferred with a trigger, and no adopted move failed to beat its baseline.
 
@@ -190,13 +190,13 @@ read-committed or snapshot, not serializable — read-then-write paths get write
 pattern (search, analytics, feeds) justifies derived data kept in sync by CDC — never dual writes; and
 replicas from Phase 5 force deliberate read-your-writes.
 
-**Invoke:** Use the `ddia-systems` skill with the slowest queries from the Phase 5 profile and the database from intake. Ask for a query-plan audit (N+1s, missing indexes, unbounded reads), the actual default isolation level and its anomalies on your paths, and a per-workload model and engine fit.
+**Invoke:** Use the `ddia-systems` skill with the Phase 1 profile, the Phase 5 findings, and the database from intake. If no query-level source exists yet, enable one first (`pg_stat_statements`, `auto_explain`, slow-query log) — that is Phase 1 instrumentation deferred, not a reason to guess. Ask for a query-plan audit (N+1s, missing indexes, unbounded reads), the actual default isolation level and its anomalies on your paths, and a per-workload model and engine fit.
 
 **Decide with the user:** Which indexes to add, weighing write cost; which paths get locks versus serializable transactions versus tolerated anomalies; whether any workload justifies a second datastore synced by CDC.
 
 **Artifact:** Extend docs/ARCHITECTURE.md `## Data & Storage Decisions` and `## Decision Log`; extend docs/PERFORMANCE.md `## Profile Findings` and `## Optimization Ledger` with query before/afters. Update the tracker.
 
-**Done when:** the slow queries are fixed with measured before/after, every list endpoint is paginated, the isolation level is documented with risky paths locked, and any derived data has a defined sync mechanism.
+**Done when:** the slow queries are fixed with measured before/after, every list endpoint on the in-scope flows is paginated (the rest become Debt Ledger rows), the isolation level is documented with risky paths locked, and any derived data has a defined sync mechanism.
 
 ### Phase 7 — Keep it fast when things fail (release-it)
 
@@ -217,7 +217,7 @@ budgets become production guardrails instead of a one-time snapshot.
 
 **Artifact:** Create-or-extend docs/RELIABILITY.md `## Integration-Point Audit` (dependency | timeout | circuit breaker | bulkhead | retry policy | status), `## Query & Resource Findings`, and `## Health Checks & Metrics`. Update the tracker.
 
-**Done when:** every outbound call has a timeout inside its flow's budget, critical dependencies have breakers and bulkheads, and RED metrics with symptom alerts guard the Phase 1 budgets in production.
+**Done when:** every outbound call on the in-scope flows has a timeout inside its flow's budget (calls outside them become Debt Ledger rows), critical dependencies have breakers and bulkheads, unbounded result sets and blocked threads are recorded in `## Query & Resource Findings`, and RED metrics with symptom alerts guard the Phase 1 budgets in production.
 
 ### Phase 8 — Lock in budgets and habits (pragmatic-programmer)
 
@@ -249,7 +249,7 @@ conventions down; the ledger, not memory, carries what was deferred.
 | high-perf-browser | the measured slowness is in the browser — page load, LCP, blocking resources — not the backend | Extends docs/METRICS.md `## Baselines & Targets`, docs/WEBSITE.md `## Audit Findings` |
 | team-topologies | more than one team owns the system, so module boundaries must align with team boundaries (Conway) | Extends docs/OPERATIONS.md `## Team Structure` |
 
-Optional phases follow the same operating rules — load and use each listed skill exactly as a core phase would; insert where the Add-when condition first becomes true.
+Optional phases follow the same operating rules — load and use each listed skill exactly as a core phase would; insert where the Add-when condition first becomes true. They carry no inline Brief: standalone, run clean-code as a naming, function-size, and error-handling pass, domain-driven-design as a ubiquitous-language and bounded-context map, high-perf-browser as a Core Web Vitals audit (LCP, INP, CLS), and team-topologies as a cognitive-load and team-boundary review — or install the named skill for its full framework.
 
 ## Common Mistakes
 

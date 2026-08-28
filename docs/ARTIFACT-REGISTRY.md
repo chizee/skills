@@ -297,10 +297,12 @@ One conversion flow end to end — its steps, why people drop, and what answers 
 
 ## Flow Map & ONE Action
 Flow scope (entry → conversion), the single action each step drives, competing CTAs cut.
-| Step | ONE action | Current message/CTA | Notes |
-|---|---|---|---|
+| Step | ONE action | Current message/CTA | Proposed message/CTA | Notes |
+|---|---|---|---|---|
 
 ## Leak Diagnosis
+Why each step loses people. METRICS.md `## Funnel` stays canonical for the conversion numbers; this
+table adds the researched reason and severity, and cites those numbers rather than restating them.
 | Stage | Baseline | Benchmark | Evidence for why | Severity |
 |---|---|---|---|---|
 
