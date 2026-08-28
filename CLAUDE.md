@@ -174,6 +174,12 @@ metadata:
 
 The versions in `.claude-plugin/marketplace.json` (top-level `metadata.version` and every `plugins[].version`) are **not** hand-edited. They are auto-synced to the latest GitHub release by `.github/workflows/sync-marketplace-version.yml`, which runs `scripts/sync-marketplace-versions.sh` on each published release (which in turn regenerates the `plugins/` and `.agents/plugins/` trees via `scripts/generate-plugins.sh`) and commits the result to `main`. To ship: bump the affected skills' `SKILL.md` versions, merge, then publish a `vX.Y.Z` GitHub release — the workflow sets all marketplace versions to `X.Y.Z`. To sync without a release, run `scripts/sync-marketplace-versions.sh X.Y.Z` locally.
 
+## Testing
+
+**Tautological tests considered harmful.** A test that restates the implementation instead of pinning behavior proves nothing: it passes for any code that compiles, fails only when the implementation is edited, and turns every refactor into a test rewrite. Typical shapes — asserting a mock returns what the test told it to return, re-deriving the expected value with the same expression the code under test uses, `expect(CONSTANT).toBe(CONSTANT)`, or snapshotting output nobody read before approving it.
+
+Write tests against observable behavior and hand-computed expected values instead. Delete tautological tests on sight rather than fixing them — they carry no coverage to preserve. This applies to any test written in this repo and to the test examples inside the code-quality skills (`clean-code`, `working-with-legacy-code`, `refactoring-patterns`); a characterization test that pins an *observed* value is not tautological, but one that pins whatever the code recomputes at assert time is.
+
 ## Commit Policy
 
 Commit directly to main.
