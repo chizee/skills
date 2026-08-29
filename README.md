@@ -1,6 +1,6 @@
 # Wondel.ai Agent Skills — Business, Marketing, UX & Coding Frameworks from Bestselling Books
 
-64 agent skills for Claude, Claude Code, Claude Cowork, Codex, Cursor, OpenClaw, Hermes Agent and other agentskills.io-compatible agents — also packaged as spec-conformant [Agent Plugins](https://agent-plugins.org/): 50 expert frameworks from bestselling books, plus 14 **metaskills** — guided journeys that orchestrate them step by step to create, improve, or grow a business, website, or app, and to improve code quality, remove technical debt, design code architecture, optimize a conversion flow, or optimize an existing codebase. Each metaskill asks you the decision questions phase by phase and keeps its state in your project's `docs/` folder, so a journey survives across sessions. Browse all skills at [skills.wondel.ai](https://skills.wondel.ai/).
+65 agent skills for Claude, Claude Code, Claude Cowork, Codex, Cursor, OpenClaw, Hermes Agent and other agentskills.io-compatible agents — also packaged as spec-conformant [Agent Plugins](https://agent-plugins.org/): 51 expert frameworks from bestselling books and industry style guides, plus 14 **metaskills** — guided journeys that orchestrate them step by step to create, improve, or grow a business, website, or app, and to improve code quality, remove technical debt, design code architecture, optimize a conversion flow, or optimize an existing codebase. Each metaskill asks you the decision questions phase by phase and keeps its state in your project's `docs/` folder, so a journey survives across sessions. Browse all skills at [skills.wondel.ai](https://skills.wondel.ai/).
 
 ## Installation
 
@@ -18,7 +18,7 @@
 /plugin install product-innovation@wondelai-skills    # Lean Startup, Design Sprint, Design of Everyday Things, Inspired, Continuous Discovery, 37signals Way
 /plugin install strategy-growth@wondelai-skills       # Crossing the Chasm, Blue Ocean Strategy, Traction/EOS, Obviously Awesome
 /plugin install team-motivation@wondelai-skills       # Drive (Autonomy, Mastery, Purpose)
-/plugin install code-craftsmanship@wondelai-skills    # Clean Code, Refactoring Patterns, Software Design Philosophy, Pragmatic Programmer, DDD
+/plugin install code-craftsmanship@wondelai-skills    # Clean Code, Refactoring Patterns, Software Design Philosophy, Pragmatic Programmer, DDD, Working with Legacy Code, Google Docs Style
 /plugin install systems-architecture@wondelai-skills  # DDIA, System Design, Clean Architecture, Release It!, High Performance Browser Networking
 /plugin install metaskills@wondelai-skills            # 14 guided journeys: create/improve/grow a business, website, or app + code quality, tech debt, architecture, conversion, optimization
 ```
@@ -82,6 +82,7 @@ npx skills add wondelai/skills/working-with-legacy-code --global
 npx skills add wondelai/skills/team-topologies --global
 npx skills add wondelai/skills/high-output-management --global
 npx skills add wondelai/skills/lean-analytics --global
+npx skills add wondelai/skills/technical-documentation --global
 
 # Metaskills — guided journeys that orchestrate the skills above
 npx skills add wondelai/skills/create-business --global
@@ -112,7 +113,7 @@ Codex adopted the same open `SKILL.md` standard, so every skill here works in Co
 The same collections also ship in the open [Agent Plugins](https://agent-plugins.org/) format (spec v1.0.0), so any conforming client can install them:
 
 - **Collection plugins** — each `plugins/<collection>/` directory is a self-contained Agent Plugin: a root `plugin.json` manifest plus real copies of its skills under `skills/` — the same 10 collections as the Claude marketplace.
-- **All-in-one bundle** — [`plugins/wondelai-skills/`](plugins/wondelai-skills/) is a single Agent Plugin containing all 64 skills.
+- **All-in-one bundle** — [`plugins/wondelai-skills/`](plugins/wondelai-skills/) is a single Agent Plugin containing all 65 skills.
 - **Installing** — the spec defines the package format; installation is client-specific. Clone this repo and point your client at a plugin directory (e.g. `plugins/marketing-cro` or `plugins/wondelai-skills`). The manifests are generated from [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) (single source of truth) by `scripts/generate-plugins.sh`.
 
 ## Available Skills
@@ -169,6 +170,7 @@ The same collections also ship in the open [Agent Plugins](https://agent-plugins
 | [team-topologies](https://skills.wondel.ai/skills/team-topologies/) | Four team types, three interaction modes, Conway's law, team cognitive load | [Matthew Skelton](https://x.com/matthewpskelton) & [Manuel Pais](https://x.com/manupaisable)'s [*"Team Topologies"*](https://www.amazon.com/Team-Topologies-Organizing-Business-Technology/dp/1942788819?tag=wondelai00-20) |
 | [high-output-management](https://skills.wondel.ai/skills/high-output-management/) | Managerial leverage, one-on-ones, OKRs, task-relevant maturity | Andrew S. Grove's [*"High Output Management"*](https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884?tag=wondelai00-20) |
 | [lean-analytics](https://skills.wondel.ai/skills/lean-analytics/) | One Metric That Matters, metrics by business model and stage, benchmarks | [Alistair Croll](https://x.com/acroll) & [Ben Yoskovitz](https://x.com/byosko)'s [*"Lean Analytics"*](https://www.amazon.com/Lean-Analytics-Better-Startup-Faster/dp/1449335675?tag=wondelai00-20) |
+| [technical-documentation](https://skills.wondel.ai/skills/technical-documentation/) | Audit, write, and improve developer docs: reader fit, procedures, code samples, API reference, changelogs | [Google](https://developers.google.com/style)'s *Developer Documentation Style Guide* |
 | [create-business](https://skills.wondel.ai/skills/create-business/) | Guided journey: raw idea → validated, positioned, priced business | Orchestrates 10 skills, from jobs-to-be-done to crossing-the-chasm |
 | [create-website](https://skills.wondel.ai/skills/create-website/) | Guided journey: blank page → high-converting website | Orchestrates 10 skills, from storybrand-messaging to steve-jobs-design-review |
 | [create-app](https://skills.wondel.ai/skills/create-app/) | Guided journey: idea → validated, well-architected app | Orchestrates 10 skills, from lean-startup to software-design-philosophy |
@@ -184,7 +186,7 @@ The same collections also ship in the open [Agent Plugins](https://agent-plugins
 | [conversion-optimization](https://skills.wondel.ai/skills/conversion-optimization/) | Guided journey: find, fix, and prove one leaking conversion flow | Orchestrates 6 skills, from lean-analytics to design-everyday-things |
 | [architecture-optimization](https://skills.wondel.ai/skills/architecture-optimization/) | Guided journey: make a working codebase measurably faster and cleaner | Orchestrates 8 skills, from working-with-legacy-code to pragmatic-programmer |
 
-> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 94 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs) — including one for each guided journey.
+> **Looking for real-world scenarios?** See [EXAMPLES.md](EXAMPLES.md) for 96 copy-pasteable prompts organized by persona (founders, PMs, marketers, designers, sales, copywriters, solopreneurs) — including one for each guided journey.
 
 ---
 
@@ -1340,6 +1342,28 @@ Choose the One Metric That Matters for your business model and stage, kill vanit
 
 ---
 
+### [technical-documentation](https://skills.wondel.ai/skills/technical-documentation/)
+
+Audit, write, and improve developer documentation the way Google's technical writers do: start from the reader's task, verify every command and parameter against the code, then apply the style guide in severity order — structure before voice, voice before word choice. Covers READMEs, getting-started guides, tutorials and how-tos, API reference and docstrings, CLI help text, changelogs, and migration guides, with a scored audit report and a rewrite that keeps the facts intact.
+
+**About the source material:** [Google's Developer Documentation Style Guide](https://developers.google.com/style) is the public house style Google's technical writers maintain for developers.google.com, Android, and Google Cloud, released under CC BY 4.0; the companion [Technical Writing One and Two](https://developers.google.com/tech-writing) courses are Google's internal engineer training made public. Release-note structure follows [Keep a Changelog](https://keepachangelog.com/).
+
+**Use when you need to:**
+- Audit a README, docs site, or API reference and get a scored report with exact fixes
+- Write a getting-started guide, tutorial, or how-to from the code without inventing commands
+- Rewrite confusing docs for clarity while preserving every fact
+- Turn weak docstrings or JSDoc into formulaic, complete API reference
+- Write a CHANGELOG, release notes, or a migration guide readers can act on
+- Set a documentation standard for a team and enforce it consistently
+
+**Example prompts:**
+- *"Audit our README against a real docs style guide, score it, and give me the fixed version. Use technical-documentation skill."*
+- *"Write a how-to for adding a plugin to this repo — use only what's in the code and CLAUDE.md. Use technical-documentation skill."*
+- *"Rewrite the JSDoc in src/client.ts so it reads like proper API reference. Don't touch the code. Use technical-documentation skill."*
+- *"Turn our git log since v2.3 into a Keep a Changelog entry with a migration section for the breaking change. Use technical-documentation skill."*
+
+---
+
 ### [create-business](https://skills.wondel.ai/skills/create-business/)
 
 Guided journey from raw idea to a validated, positioned, priced business with a chosen beachhead. The agent drives every phase, asks you the decision questions, and records everything as living documents in your project's `docs/` folder so the journey resumes across sessions.
@@ -1637,7 +1661,7 @@ Developer Toolkit is a comprehensive learning platform for mastering AI-assisted
 
 ## Work With Us
 
-These 64 skills are the open-source tip of what we do. **[Wondel.ai](https://skills.wondel.ai/work-with-us/)** builds custom Claude skills, agents, and MCP integrations — shipped to production, not demoed.
+These 65 skills are the open-source tip of what we do. **[Wondel.ai](https://skills.wondel.ai/work-with-us/)** builds custom Claude skills, agents, and MCP integrations — shipped to production, not demoed.
 
 - **Skill sprints** — a focused, eval-backed skill scoped and shipped fast
 - **Custom builds** — production AI systems combining skills, agents, and MCP integrations
@@ -1706,6 +1730,7 @@ The methodologies and frameworks referenced in these skills are the intellectual
 - **Team Topologies**: Matthew Skelton, Manuel Pais
 - **High Output Management**: Andrew S. Grove
 - **Lean Analytics**: Alistair Croll, Benjamin Yoskovitz
+- **Google Developer Documentation Style Guide**: Google LLC, adapted under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 The 14 metaskills (create/improve/grow × business/website/app, improve-code-quality, remove-technical-debt, design-code-architecture, conversion-optimization, architecture-optimization) are orchestration workflows authored by Wondel.ai. They sequence and invoke the skills above; the frameworks they reference remain the intellectual property of the authors listed here.
 

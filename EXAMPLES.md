@@ -1923,6 +1923,27 @@ Use working-with-legacy-code skill.
 
 ---
 
+### Audit and Fix the README Before Launch
+
+> Your README grew by accretion; new users still open issues asking how to install.
+
+**Prompt:**
+
+```
+Audit README.md against a real docs style guide. I want:
+(1) A scored report — what fails, where, and which rule
+(2) The rewritten README — same facts, every command
+    verified against the CLI's --help, placeholders in
+    ALL_CAPS, numbered steps, no "click here"
+(3) A change log of what you changed and why
+
+Use technical-documentation skill.
+```
+
+**Skills used:** technical-documentation
+
+---
+
 ## Tech Leads & Architects
 
 You design systems, review architecture, mentor engineers, and make decisions that are expensive to reverse.
@@ -2155,6 +2176,28 @@ Use high-output-management skill.
 ```
 
 **Skills used:** high-output-management
+
+---
+
+### Set the Team's Documentation Standard
+
+> Six engineers write docs six ways: some pages say "log in", some "sign in"; docstrings range from empty to essays; the changelog is a git log.
+
+**Prompt:**
+
+```
+Set a documentation standard for our TypeScript SDK repo:
+(1) Audit docs/ and the JSDoc in src/ — score them and
+    list the top 10 recurring problems with rule IDs
+(2) Write docs/STYLE.md: our conventions layered on the
+    Google style guide, including the CHANGELOG format
+(3) Rewrite one API reference page and the CHANGELOG as
+    the reference examples the team copies from
+
+Use technical-documentation skill.
+```
+
+**Skills used:** technical-documentation
 
 ---
 
@@ -2486,6 +2529,7 @@ Quick reference showing where each skill appears in the examples above.
 | cold-start-problem | Startup Founders |
 | lean-analytics | Product Managers |
 | working-with-legacy-code | Software Engineers |
+| technical-documentation | Software Engineers, Tech Leads |
 | team-topologies | Tech Leads |
 | high-output-management | Tech Leads |
 | create-business | Guided Journeys |
